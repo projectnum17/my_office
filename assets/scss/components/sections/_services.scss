@@ -17,9 +17,41 @@
         overflow: hidden;
         background: $dark_indigo;
 
+        @include media('desktop') {
+            padding: rem(64px);
+        }
+
+        &-about {
+            @include media('desktop') {
+                max-width: rem(710px);
+            }
+        }
+
+        &-head {
+            @include media('desktop') {
+                display: flex;
+                gap: rem(31px);
+                align-items: flex-start;
+            }
+        }
+
         &-descr {
             font: 500 #{rem(14px)} / 150% $ff-base;
             margin-bottom: rem(24px);
+            @include media('laptop') {
+                font-size: rem(18px);
+            }
+            @include media('desktop') {
+                margin-bottom: 0;
+            }
+        }
+
+        &-text {
+            p {
+                @include media('laptop') {
+                    font-size: rem(18px);
+                }
+            }
         }
 
         &-tags {
@@ -34,10 +66,17 @@
                 display: none;
             }
 
+            @include media('desktop') {
+                overflow: inherit;
+                flex-wrap: wrap;
+                max-width: 50%;
+            }
+
             li {
                 display: flex;
                 flex-shrink: 0;
                 a {
+                    font: 400 #{rem(14px)} / 150% $ff-base;
                     border-radius: rem(24px);
                     display: flex;
                     align-items: center;
@@ -46,6 +85,9 @@
                     padding: rem(6px) rem(10px);
                     border: 1px solid #717bb1;
                     background: #34407d;
+                    @include media('desktop') {
+                        font-size: rem(18px);
+                    }
 
                     &::before {
                         content: '';
@@ -83,6 +125,12 @@
             display: flex;
             flex-direction: column-reverse;
             gap: rem(24px);
+
+            @include media('desktop') {
+                padding-top: rem(56px);
+                flex-direction: row;
+                justify-content: space-between;
+            }
         }
 
         &-features {
@@ -98,12 +146,18 @@
                 font: 500 #{rem(14px)} / 150% $ff-base;
                 margin: 0;
                 margin-bottom: rem(24px);
+                @include media('laptop') {
+                    font-size: rem(18px);
+                }
             }
 
             span {
                 font: 400 #{rem(40px)} / #{rem(36px)} $ff-base;
                 letter-spacing: 0.4px;
                 color: #9dd0ff;
+                @include media('desktop') {
+                    font-size: rem(56px);
+                }
             }
 
             img {
@@ -115,6 +169,9 @@
                 display: flex;
                 flex-direction: column;
                 gap: rem(12px);
+                @include media('desktop') {
+                    max-width: rem(350px);
+                }
 
                 li {
                     flex-direction: row-reverse;
@@ -142,6 +199,12 @@
                 justify-content: flex-start;
                 gap: rem(24px);
                 max-width: rem(267px);
+                @include media('laptop') {
+                    max-width: 100%;
+                }
+                @include media('desktop') {
+                    max-width: rem(267px);
+                }
 
                 li {
                     &:first-child {
@@ -164,15 +227,28 @@
         }
 
         &-row {
+            &:last-child {
+                @include media('desktop') {
+                    max-width: rem(709px);
+                }
+            }
             &:first-child {
                 display: flex;
                 flex-direction: column;
                 gap: rem(24px);
+                @include media('desktop') {
+                    flex-direction: column-reverse;
+                    justify-content: space-between;
+                }
             }
         }
 
         &-label {
             display: none;
+            @include media('desktop') {
+                display: block;
+                padding-top: rem(121px);
+            }
         }
 
         &-bg {
@@ -180,6 +256,14 @@
             top: 0;
             right: 0;
             pointer-events: none;
+
+            @include media('desktop') {
+                width: rem(531px);
+                right: auto;
+                left: 40%;
+                top: 80%;
+                transform: translate(-50%, -50%);
+            }
         }
 
         .content-title {
@@ -190,6 +274,9 @@
             order: 2;
             z-index: 2;
             width: 100%;
+            @include media('desktop') {
+                max-width: rem(260px);
+            }
         }
     }
 }

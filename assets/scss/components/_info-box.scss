@@ -6,6 +6,10 @@
     display: flex;
     flex-direction: column;
     gap: rem(24px);
+    @include media('desktop') {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 }
 
 .info-box {
@@ -17,9 +21,17 @@
     border-radius: rem(1px) rem(24px) rem(1px) rem(24px);
     background: $dark_indigo;
     @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    @include media('laptop') {
+        padding: rem(70px) rem(32px) rem(64px);
+        border-radius: rem(1px) rem(40px) rem(1px) rem(40px);
+    }
 
     @include hover {
         background: $lgth_color;
+
+        @include media('laptop') {
+            padding: rem(33px);
+        }
 
         .info-box__ico {
             color: $dark_indigo;
@@ -53,6 +65,10 @@
 
     &.is-active {
         background: $lgth_color;
+
+        @include media('laptop') {
+            padding: rem(33px);
+        }
 
         .info-box__ico {
             color: $dark_indigo;
@@ -91,6 +107,11 @@
         margin-bottom: rem(24px);
         color: $blue_color;
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('laptop') {
+            width: rem(48px);
+            height: rem(48px);
+            margin-bottom: rem(32px);
+        }
     }
 
     &__head {
@@ -99,6 +120,10 @@
         justify-content: space-between;
         gap: rem(24px);
         width: 100%;
+        @include media('laptop') {
+            justify-content: flex-start;
+            gap: rem(12px);
+        }
 
         p {
             font: 500 #{rem(22px)} / 130% $ff-base;
@@ -108,6 +133,9 @@
                 0.5s,
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
             );
+            @include media('laptop') {
+                font-size: rem(28px);
+            }
         }
 
         span {

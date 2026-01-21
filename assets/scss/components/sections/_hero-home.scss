@@ -3,11 +3,21 @@
 @use '../../base/mixins' as *;
 
 .hero-home {
+    padding-top: rem(137px);
     display: grid;
     position: relative;
     min-height: calc(100vh - #{rem(84px)});
     min-height: calc(100svh - #{rem(84px)});
     margin-bottom: rem(48px);
+
+    @include media('tablet') {
+        min-height: auto;
+        margin-bottom: 0;
+    }
+
+    @include media('desktop') {
+        padding-top: rem(190px);
+    }
 
     @include hover {
         &::after {
@@ -40,12 +50,49 @@
         flex-direction: column;
         justify-content: space-between;
         gap: rem(20px);
-        padding-block: rem(53px);
+        padding-block: 0 rem(53px);
+
+        @include media('tablet') {
+            padding-block: 0 rem(104px);
+        }
+
+        @include media('laptop') {
+            gap: rem(90px);
+        }
+    }
+
+    &__head {
+        @include media('desktop') {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: rem(40px);
+            position: relative;
+        }
     }
 
     &__title {
         font: 700 #{rem(34px)} / 125% $ff-base;
         margin-bottom: rem(32px);
+
+        br {
+            display: none;
+        }
+        @include media('tablet') {
+            font-size: rem(48px);
+        }
+        @include media('laptop') {
+            font-size: rem(72px);
+        }
+
+        @include media('desktop') {
+            font-size: rem(104px);
+            margin-bottom: 0;
+
+            br {
+                display: block;
+            }
+        }
     }
 
     &__text {
@@ -58,6 +105,14 @@
             width: 2px;
             border-radius: 2px;
             background: #4a9fee66;
+        }
+
+        @include media('desktop') {
+            position: absolute;
+            max-width: rem(240px);
+            width: 100%;
+            left: 55%;
+            top: 50px;
         }
     }
 
@@ -81,6 +136,10 @@
                 padding-inline: rem(23px);
                 margin-inline: rem(23px);
                 position: relative;
+                @include media('laptop') {
+                    padding-inline: rem(80px);
+                    margin-inline: rem(80px);
+                }
 
                 &::after,
                 &::before {
@@ -104,16 +163,27 @@
             img {
                 width: rem(32px);
                 height: rem(32px);
+                @include media('laptop') {
+                    width: rem(48px);
+                    height: rem(48px);
+                }
             }
 
             span {
                 font: 400 #{rem(36px)} / 100% $ff-base;
                 letter-spacing: 0.4px;
                 color: #9dd0ff;
+                @include media('laptop') {
+                    font-size: rem(64px);
+                    line-height: 36px;
+                }
             }
 
             p {
                 font: 400 #{rem(16px)} / 150% $ff-base;
+                @include media('laptop') {
+                    font-size: rem(18px);
+                }
             }
         }
     }
@@ -123,5 +193,9 @@
         top: 0;
         right: 0;
         z-index: -1;
+        @include media('laptop') {
+            width: rem(531px);
+            height: rem(767px);
+        }
     }
 }

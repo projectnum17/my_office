@@ -20,5 +20,19 @@
 
     .content-title {
         margin-bottom: rem(32px);
+        @include media('laptop') {
+            margin-top: rem(64px);
+        }
+    }
+
+    .cta {
+        width: 100%;
+        margin-top: rem(32px);
+        @include media('tablet') {
+            max-width: rem(260px);
+        }
+        @include media('laptop') {
+            margin-top: rem(64px);
+        }
     }
 }

@@ -76,6 +76,12 @@
     }
 
     &__content {
+        overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
         padding-block: rem(65px) rem(40px);
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         @include media('laptop') {

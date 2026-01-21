@@ -9,6 +9,9 @@
 
     .content-title {
         margin-bottom: rem(32px);
+        @include media('laptop') {
+            margin-bottom: rem(103px);
+        }
     }
 
     &__boxes {
@@ -40,6 +43,10 @@
         img {
             width: rem(129px);
             height: rem(50px);
+            @include media('laptop') {
+                width: rem(195px);
+                height: rem(76px);
+            }
         }
     }
 

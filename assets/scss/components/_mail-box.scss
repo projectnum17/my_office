@@ -7,6 +7,10 @@
     flex-shrink: 0;
     width: rem(87px);
     height: rem(87px);
+    @include media('laptop') {
+        width: rem(108px);
+        height: rem(108px);
+    }
 
     &__circle {
         transform-origin: center;

@@ -6,18 +6,48 @@
     overflow: hidden;
     margin-bottom: var(--section-pdd);
     position: relative;
+
+    .container {
+        @include media('laptop') {
+            display: flex;
+            justify-content: space-between;
+            gap: rem(40px);
+        }
+    }
+
     &__panel {
         &.mobile--hidden {
             display: none;
+            @include media('laptop') {
+                display: block;
+            }
+        }
+        &.mobile--visible {
+            @include media('laptop') {
+                display: none;
+            }
         }
     }
 
     &__descr {
         margin-bottom: rem(32px);
+        @include media('laptop') {
+            width: 50%;
+        }
+        @include media('desktop') {
+            width: 100%;
+            max-width: rem(699px);
+        }
     }
 
     &__text {
         font: 400 #{rem(18px)} / 150% $ff-base;
+        @include media('laptop') {
+            margin-bottom: rem(56px);
+        }
+        @include media('desktop') {
+            max-width: rem(576px);
+        }
     }
 
     &__soc {
@@ -30,6 +60,10 @@
             display: inline-flex;
             width: rem(40px);
             height: rem(40px);
+            @include media('desktop') {
+                width: rem(48px);
+                height: rem(48px);
+            }
 
             a {
                 width: 100%;
@@ -63,6 +97,9 @@
                 }
             }
         }
+        @include media('desktop') {
+            font-size: rem(24px);
+        }
 
         svg {
             width: rem(48px);
@@ -91,17 +128,46 @@
         position: absolute;
         top: rem(-10px);
         right: rem(-10px);
+        @include media('desktop') {
+            width: rem(386px);
+            height: rem(557px);
+            left: rem(250px);
+            top: 50%;
+        }
     }
 
     .content-title {
         margin-bottom: rem(16px);
+        @include media('desktop') {
+            margin-bottom: rem(56px);
+        }
     }
 
     .hidden-title {
         display: none;
+        @include media('laptop') {
+            display: block;
+            padding-top: rem(27px);
+        }
     }
 
     .feedback-form {
         margin-bottom: rem(32px);
+        @include media('laptop') {
+            width: 50%;
+            margin-bottom: 0;
+        }
+        @include media('desktop') {
+            width: 100%;
+            max-width: rem(793px);
+
+            .form-data form {
+                padding: rem(64px);
+            }
+
+            .form-data form .cta {
+                max-width: rem(260px);
+            }
+        }
     }
 }

@@ -1,0 +1,24 @@
+@use '../../base/media' as *;
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+
+.hidden-title {
+    font: 800 #{rem(34px)} / 130% $ff-base;
+    opacity: 10%;
+    color: #9dd0ff;
+
+    @include media('tablet') {
+        font-size: rem(48px);
+    }
+    @include media('laptop') {
+        font-size: rem(72px);
+    }
+
+    @include media('desktop') {
+        font-size: rem(104px);
+
+        &--sm {
+            font-size: rem(80px);
+        }
+    }
+}

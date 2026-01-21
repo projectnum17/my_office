@@ -124,11 +124,11 @@
         </div>
     </header>
     <main class="main">
-        <section class="hero-home js-cursor" style="display: none !important;">
+        <section class="hero-home js-cursor">
             <div class="container">
                 <div class="hero-home__head">
                     <h1 class="hero-home__title">
-                        The Workplace Adequacy <span class="gradient-text">Framework</span>
+                        The Workplace <br> Adequacy <span class="gradient-text">Framework</span>
                     </h1>
                     <div class="hero-home__descr">
                         <p class="hero-home__text">
@@ -178,7 +178,7 @@
             </div>
             <img src="./assets/imgs/dots-mask.png" alt="" class="hero-home__bg">
         </section>
-        <section class="services" style="display: none !important;">
+        <section class="services">
             <div class="container">
                 <div class="services__tabs info-boxes js-services-parent">
                     <button type="button" class="services__tab info-box js-services-tab">
@@ -590,7 +590,7 @@
                                         workplaces evolve in step with the needs of both employees and the business.
                                     </p>
                                 </div>
-                                <p class="services__box-label hidden-title">Needs Assesment Tools</p>
+                                <p class="services__box-label hidden-title hidden-title--sm">Needs Assesment Tools</p>
                             </div>
                         </div>
                         <img src="./assets/imgs/dots-mask.png" alt="" class="services__box-bg">
@@ -598,7 +598,7 @@
                 </div>
             </div>
         </section>
-        <section class="partners" style="display: none !important;">
+        <section class="partners">
             <div class="container">
                 <h2 class="content-title">Trusted by leading brands</h2>
             </div>
@@ -672,7 +672,7 @@
                 </div>
             </div>
         </section>
-        <section class="workspace" style="display: none !important;">
+        <section class="workspace">
             <div class="container">
                 <div class="workspace__head">
                     <h2 class="content-title">
@@ -684,190 +684,242 @@
                         Facilitate Collaboration, Increase Adaptability, and Insights Through Participation.
                     </p>
                 </div>
-                <div class="lines-wrapper">
-                    <div class="workspace__pagination js-workspace-pag"
-                        data-circle-content="Adequate Workplace Strategy">
+                <div class="workspace__info">
+                    <div class="lines-wrapper">
+                        <div class="workspace__pagination js-workspace-pag"
+                            data-circle-content="Adequate Workplace Strategy">
+                        </div>
+                        <div class="lines-wrapper__item frst-el"></div>
+                        <div class="lines-wrapper__item scnd-el"></div>
+                        <div class="lines-wrapper__item thrd-el"></div>
+                        <div class="lines-wrapper__item frth-el"></div>
+                        <div class="lines-wrapper__item ffth-el"></div>
                     </div>
-                    <div class="lines-wrapper__item frst-el"></div>
-                    <div class="lines-wrapper__item scnd-el"></div>
-                    <div class="lines-wrapper__item thrd-el"></div>
-                    <div class="lines-wrapper__item frth-el"></div>
-                    <div class="lines-wrapper__item ffth-el"></div>
-                </div>
-                <div class="workspace__slider swiper js-workspace-slider">
-                    <div class="workspace__wrapper swiper-wrapper">
-                        <div class="workspace__slide swiper-slide" data-pagination-title="Right sizing">
-                            <div class="workspace-box">
-                                <div class="workspace-box__head">
-                                    <button type="button" class="workspace-box__btn js-prev">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M14.0781 11.0801L4.82812 11.0801L10.0781 5.83008L9.41813 5.08008L2.91813 11.5801L9.41813 18.0801L10.0781 17.3301L4.82812 12.0801L14.0781 12.0801V11.0801Z"
-                                                fill="#9DD0FF" />
-                                            <rect width="1" height="4" transform="matrix(0 -1 -1 0 20.0781 12.0801)"
-                                                fill="#9DD0FF" />
-                                        </svg>
-                                    </button>
-                                    <p class="workspace-box__title">Right sizing</p>
-                                    <button type="button" class="workspace-box__btn js-next">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
-                                                fill="#9DD0FF" />
-                                            <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
-                                                fill="#9DD0FF" />
-                                        </svg>
-                                    </button>
+                    <div class="workspace__content">
+                        <div class="workspace__slider swiper js-workspace-slider">
+                            <div class="workspace__wrapper swiper-wrapper">
+                                <div class="workspace__slide swiper-slide" data-pagination-title="Right sizing">
+                                    <div class="workspace-box">
+                                        <div class="workspace-box__head">
+                                            <button type="button" class="workspace-box__btn js-prev slider-nav">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.0781 11.0801L4.82812 11.0801L10.0781 5.83008L9.41813 5.08008L2.91813 11.5801L9.41813 18.0801L10.0781 17.3301L4.82812 12.0801L14.0781 12.0801V11.0801Z"
+                                                        fill="#9DD0FF" />
+                                                    <rect width="1" height="4"
+                                                        transform="matrix(0 -1 -1 0 20.0781 12.0801)" fill="#9DD0FF" />
+                                                </svg>
+                                            </button>
+                                            <p class="workspace-box__title">Right sizing</p>
+                                            <button type="button" class="workspace-box__btn js-next slider-nav">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                                        fill="#9DD0FF" />
+                                                    <rect width="1" height="4"
+                                                        transform="matrix(0 -1 1 0 2.92188 12.0801)" fill="#9DD0FF" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <p class="workspace-box__text">
+                                            Dimensioning the workplace correctly is a prerequisite for a feeling of
+                                            crowding
+                                            not
+                                            to arise and for employees to easily find adequate areas for their
+                                            activities.
+                                            An
+                                            undersized workplace creates frustration and dissatisfaction and an
+                                            oversized
+                                            one
+                                            leads to less desired interactions and higher premises costs.
+                                        </p>
+                                        <img src="./assets/imgs/dots-mask.png" alt="" class="workspace-box__bg">
+                                    </div>
                                 </div>
-                                <p class="workspace-box__text">
-                                    Dimensioning the workplace correctly is a prerequisite for a feeling of crowding not
-                                    to arise and for employees to easily find adequate areas for their activities. An
-                                    undersized workplace creates frustration and dissatisfaction and an oversized one
-                                    leads to less desired interactions and higher premises costs.
-                                </p>
+                                <div class="workspace__slide swiper-slide" data-pagination-title="Diversify">
+                                    <div class="workspace-box">
+                                        <div class="workspace-box__head">
+                                            <button type="button" class="workspace-box__btn js-prev slider-nav">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.0781 11.0801L4.82812 11.0801L10.0781 5.83008L9.41813 5.08008L2.91813 11.5801L9.41813 18.0801L10.0781 17.3301L4.82812 12.0801L14.0781 12.0801V11.0801Z"
+                                                        fill="#9DD0FF" />
+                                                    <rect width="1" height="4"
+                                                        transform="matrix(0 -1 -1 0 20.0781 12.0801)" fill="#9DD0FF" />
+                                                </svg>
+                                            </button>
+                                            <p class="workspace-box__title">Diversify</p>
+                                            <button type="button" class="workspace-box__btn js-next slider-nav">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                                        fill="#9DD0FF" />
+                                                    <rect width="1" height="4"
+                                                        transform="matrix(0 -1 1 0 2.92188 12.0801)" fill="#9DD0FF" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <p class="workspace-box__text">
+                                            Dimensioning the workplace correctly is a prerequisite for a feeling of
+                                            crowding
+                                            not
+                                            to arise and for employees to easily find adequate areas for their
+                                            activities.
+                                            An
+                                            undersized workplace creates frustration and dissatisfaction and an
+                                            oversized
+                                            one
+                                            leads to less desired interactions and higher premises costs.
+                                        </p>
+                                        <img src="./assets/imgs/dots-mask.png" alt="" class="workspace-box__bg">
+                                    </div>
+                                </div>
+                                <div class="workspace__slide swiper-slide"
+                                    data-pagination-title="Facilitate Collaboration">
+                                    <div class="workspace-box">
+                                        <div class="workspace-box__head">
+                                            <button type="button" class="workspace-box__btn js-prev slider-nav">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.0781 11.0801L4.82812 11.0801L10.0781 5.83008L9.41813 5.08008L2.91813 11.5801L9.41813 18.0801L10.0781 17.3301L4.82812 12.0801L14.0781 12.0801V11.0801Z"
+                                                        fill="#9DD0FF" />
+                                                    <rect width="1" height="4"
+                                                        transform="matrix(0 -1 -1 0 20.0781 12.0801)" fill="#9DD0FF" />
+                                                </svg>
+                                            </button>
+                                            <p class="workspace-box__title">Facilitate Collaboration</p>
+                                            <button type="button" class="workspace-box__btn js-next slider-nav">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                                        fill="#9DD0FF" />
+                                                    <rect width="1" height="4"
+                                                        transform="matrix(0 -1 1 0 2.92188 12.0801)" fill="#9DD0FF" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <p class="workspace-box__text">
+                                            Dimensioning the workplace correctly is a prerequisite for a feeling of
+                                            crowding
+                                            not
+                                            to arise and for employees to easily find adequate areas for their
+                                            activities.
+                                            An
+                                            undersized workplace creates frustration and dissatisfaction and an
+                                            oversized
+                                            one
+                                            leads to less desired interactions and higher premises costs.
+                                        </p>
+                                        <img src="./assets/imgs/dots-mask.png" alt="" class="workspace-box__bg">
+                                    </div>
+                                </div>
+                                <div class="workspace__slide swiper-slide"
+                                    data-pagination-title="Increase Adaptability">
+                                    <div class="workspace-box">
+                                        <div class="workspace-box__head">
+                                            <button type="button" class="workspace-box__btn js-prev slider-nav">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.0781 11.0801L4.82812 11.0801L10.0781 5.83008L9.41813 5.08008L2.91813 11.5801L9.41813 18.0801L10.0781 17.3301L4.82812 12.0801L14.0781 12.0801V11.0801Z"
+                                                        fill="#9DD0FF" />
+                                                    <rect width="1" height="4"
+                                                        transform="matrix(0 -1 -1 0 20.0781 12.0801)" fill="#9DD0FF" />
+                                                </svg>
+                                            </button>
+                                            <p class="workspace-box__title">Increase Adaptability</p>
+                                            <button type="button" class="workspace-box__btn js-next slider-nav">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                                        fill="#9DD0FF" />
+                                                    <rect width="1" height="4"
+                                                        transform="matrix(0 -1 1 0 2.92188 12.0801)" fill="#9DD0FF" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <p class="workspace-box__text">
+                                            Dimensioning the workplace correctly is a prerequisite for a feeling of
+                                            crowding
+                                            not
+                                            to arise and for employees to easily find adequate areas for their
+                                            activities.
+                                            An
+                                            undersized workplace creates frustration and dissatisfaction and an
+                                            oversized
+                                            one
+                                            leads to less desired interactions and higher premises costs.
+                                        </p>
+                                        <img src="./assets/imgs/dots-mask.png" alt="" class="workspace-box__bg">
+                                    </div>
+                                </div>
+                                <div class="workspace__slide swiper-slide"
+                                    data-pagination-title="Insight Through Participation">
+                                    <div class="workspace-box">
+                                        <div class="workspace-box__head">
+                                            <button type="button" class="workspace-box__btn js-prev slider-nav">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.0781 11.0801L4.82812 11.0801L10.0781 5.83008L9.41813 5.08008L2.91813 11.5801L9.41813 18.0801L10.0781 17.3301L4.82812 12.0801L14.0781 12.0801V11.0801Z"
+                                                        fill="#9DD0FF" />
+                                                    <rect width="1" height="4"
+                                                        transform="matrix(0 -1 -1 0 20.0781 12.0801)" fill="#9DD0FF" />
+                                                </svg>
+                                            </button>
+                                            <p class="workspace-box__title">Insight Through Participation</p>
+                                            <button type="button" class="workspace-box__btn js-next slider-nav">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                                        fill="#9DD0FF" />
+                                                    <rect width="1" height="4"
+                                                        transform="matrix(0 -1 1 0 2.92188 12.0801)" fill="#9DD0FF" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <p class="workspace-box__text">
+                                            Dimensioning the workplace correctly is a prerequisite for a feeling of
+                                            crowding
+                                            not
+                                            to arise and for employees to easily find adequate areas for their
+                                            activities.
+                                            An
+                                            undersized workplace creates frustration and dissatisfaction and an
+                                            oversized
+                                            one
+                                            leads to less desired interactions and higher premises costs.
+                                        </p>
+                                        <img src="./assets/imgs/dots-mask.png" alt="" class="workspace-box__bg">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="workspace__slide swiper-slide" data-pagination-title="Diversify">
-                            <div class="workspace-box">
-                                <div class="workspace-box__head">
-                                    <button type="button" class="workspace-box__btn js-prev">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M14.0781 11.0801L4.82812 11.0801L10.0781 5.83008L9.41813 5.08008L2.91813 11.5801L9.41813 18.0801L10.0781 17.3301L4.82812 12.0801L14.0781 12.0801V11.0801Z"
-                                                fill="#9DD0FF" />
-                                            <rect width="1" height="4" transform="matrix(0 -1 -1 0 20.0781 12.0801)"
-                                                fill="#9DD0FF" />
-                                        </svg>
-                                    </button>
-                                    <p class="workspace-box__title">Diversify</p>
-                                    <button type="button" class="workspace-box__btn js-next">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
-                                                fill="#9DD0FF" />
-                                            <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
-                                                fill="#9DD0FF" />
-                                        </svg>
-                                    </button>
-                                </div>
-                                <p class="workspace-box__text">
-                                    Dimensioning the workplace correctly is a prerequisite for a feeling of crowding not
-                                    to arise and for employees to easily find adequate areas for their activities. An
-                                    undersized workplace creates frustration and dissatisfaction and an oversized one
-                                    leads to less desired interactions and higher premises costs.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="workspace__slide swiper-slide" data-pagination-title="Facilitate Collaboration">
-                            <div class="workspace-box">
-                                <div class="workspace-box__head">
-                                    <button type="button" class="workspace-box__btn js-prev">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M14.0781 11.0801L4.82812 11.0801L10.0781 5.83008L9.41813 5.08008L2.91813 11.5801L9.41813 18.0801L10.0781 17.3301L4.82812 12.0801L14.0781 12.0801V11.0801Z"
-                                                fill="#9DD0FF" />
-                                            <rect width="1" height="4" transform="matrix(0 -1 -1 0 20.0781 12.0801)"
-                                                fill="#9DD0FF" />
-                                        </svg>
-                                    </button>
-                                    <p class="workspace-box__title">Facilitate Collaboration</p>
-                                    <button type="button" class="workspace-box__btn js-next">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
-                                                fill="#9DD0FF" />
-                                            <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
-                                                fill="#9DD0FF" />
-                                        </svg>
-                                    </button>
-                                </div>
-                                <p class="workspace-box__text">
-                                    Dimensioning the workplace correctly is a prerequisite for a feeling of crowding not
-                                    to arise and for employees to easily find adequate areas for their activities. An
-                                    undersized workplace creates frustration and dissatisfaction and an oversized one
-                                    leads to less desired interactions and higher premises costs.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="workspace__slide swiper-slide" data-pagination-title="Increase Adaptability">
-                            <div class="workspace-box">
-                                <div class="workspace-box__head">
-                                    <button type="button" class="workspace-box__btn js-prev">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M14.0781 11.0801L4.82812 11.0801L10.0781 5.83008L9.41813 5.08008L2.91813 11.5801L9.41813 18.0801L10.0781 17.3301L4.82812 12.0801L14.0781 12.0801V11.0801Z"
-                                                fill="#9DD0FF" />
-                                            <rect width="1" height="4" transform="matrix(0 -1 -1 0 20.0781 12.0801)"
-                                                fill="#9DD0FF" />
-                                        </svg>
-                                    </button>
-                                    <p class="workspace-box__title">Increase Adaptability</p>
-                                    <button type="button" class="workspace-box__btn js-next">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
-                                                fill="#9DD0FF" />
-                                            <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
-                                                fill="#9DD0FF" />
-                                        </svg>
-                                    </button>
-                                </div>
-                                <p class="workspace-box__text">
-                                    Dimensioning the workplace correctly is a prerequisite for a feeling of crowding not
-                                    to arise and for employees to easily find adequate areas for their activities. An
-                                    undersized workplace creates frustration and dissatisfaction and an oversized one
-                                    leads to less desired interactions and higher premises costs.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="workspace__slide swiper-slide"
-                            data-pagination-title="Insight Through Participation">
-                            <div class="workspace-box">
-                                <div class="workspace-box__head">
-                                    <button type="button" class="workspace-box__btn js-prev">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M14.0781 11.0801L4.82812 11.0801L10.0781 5.83008L9.41813 5.08008L2.91813 11.5801L9.41813 18.0801L10.0781 17.3301L4.82812 12.0801L14.0781 12.0801V11.0801Z"
-                                                fill="#9DD0FF" />
-                                            <rect width="1" height="4" transform="matrix(0 -1 -1 0 20.0781 12.0801)"
-                                                fill="#9DD0FF" />
-                                        </svg>
-                                    </button>
-                                    <p class="workspace-box__title">Insight Through Participation</p>
-                                    <button type="button" class="workspace-box__btn js-next">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
-                                                fill="#9DD0FF" />
-                                            <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
-                                                fill="#9DD0FF" />
-                                        </svg>
-                                    </button>
-                                </div>
-                                <p class="workspace-box__text">
-                                    Dimensioning the workplace correctly is a prerequisite for a feeling of crowding not
-                                    to arise and for employees to easily find adequate areas for their activities. An
-                                    undersized workplace creates frustration and dissatisfaction and an oversized one
-                                    leads to less desired interactions and higher premises costs.
-                                </p>
-                            </div>
-                        </div>
+                        <div class="workspace__pagination-bull js-workspace-pag-bull"></div>
+                        <a href="javascript: void(0)" class="cta">
+                            Read more
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                    fill="#272D69" />
+                                <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
+                                    fill="#272D69" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                <div class="workspace__pagination-bull js-workspace-pag-bull"></div>
             </div>
         </section>
-        <section class="cases" style="display: none !important;">
+        <section class="cases">
             <div class="container">
                 <h2 class="content-title">Case-studies</h2>
                 <div class="cases__cards swiper js-cases-slider">
@@ -958,10 +1010,19 @@
                         </div>
                     </div>
                 </div>
+                <a href="javascript: void(0)" class="cta">
+                    Read all cases
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                            fill="#272D69"></path>
+                        <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)" fill="#272D69"></rect>
+                    </svg>
+                </a>
             </div>
             <img src="./assets/imgs/dots-mask.png" alt="" class="cases__bg">
         </section>
-        <section class="contact" style="display: none !important;">
+        <section class="contact">
             <div class="container">
                 <div class="contact__descr">
                     <h2 class="content-title">We’d love to hear from you!</h2>
@@ -1074,7 +1135,7 @@
             </div>
             <img src="./assets/imgs/dots-mask.png" alt="" class="contact__bg">
         </section>
-        <section class="subscribe" style="display: none !important;">
+        <section class="subscribe">
             <div class="container">
                 <div class="subscribe-box">
                     <div class="subscribe-box__head">
@@ -1130,7 +1191,7 @@
                             </div>
                         </form>
                     </div>
-                    <p class="hidden-title">subscribe</p>
+                    <p class="hidden-title">Subscribe</p>
                 </div>
             </div>
         </section>
