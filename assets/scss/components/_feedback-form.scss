@@ -267,8 +267,20 @@
         height: 70%;
         background: $dark_indigo;
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
-        @include media('desktop') {
+        @include media('laptop') {
             max-width: rem(743px);
+        }
+
+        &__bg {
+            display: none;
+            @include media('laptop') {
+                display: block;
+                position: absolute;
+                width: rem(423px);
+                height: rem(610px);
+                top: 0;
+                right: 0;
+            }
         }
 
         &.is-show {
@@ -286,6 +298,9 @@
             font: 500 #{rem(22px)} / 130% $ff-base;
             letter-spacing: 0.4px;
             text-align: center;
+            @include media('desktop') {
+                font-size: rem(28px);
+            }
         }
     }
 }
