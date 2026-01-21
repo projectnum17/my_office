@@ -3,6 +3,7 @@
 @use '../base/mixins' as *;
 
 .cases-card {
+    width: 100%;
     flex-direction: column;
     @include hover {
         .cases-card__img {
