@@ -1,0 +1,24 @@
+@use '../../base/media' as *;
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+
+.cases {
+    margin-bottom: var(--section-pdd);
+    overflow: hidden;
+    position: relative;
+
+    &__cards {
+        overflow: visible;
+    }
+
+    &__bg {
+        position: absolute;
+        top: rem(10px);
+        pointer-events: none;
+        right: rem(-10px);
+    }
+
+    .content-title {
+        margin-bottom: rem(32px);
+    }
+}

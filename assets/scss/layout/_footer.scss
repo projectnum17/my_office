@@ -1,0 +1,116 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+@use '../base/var' as *;
+
+.footer {
+    background: $navy_black;
+
+    &__head {
+        padding-block: rem(40px) rem(48px);
+
+        ul {
+            padding: 0;
+            margin: 0;
+            li {
+                list-style-type: none;
+            }
+        }
+    }
+
+    &__logo {
+        width: rem(91px);
+        height: rem(38px);
+        margin-bottom: rem(16px);
+    }
+
+    &__title {
+        font: 500 #{rem(22px)} / 130% $ff-base;
+        letter-spacing: 0.4px;
+        color: #717bb1;
+    }
+
+    &__nav {
+        padding-block: rem(40px);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(32px) rem(20px);
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: rem(4px);
+
+            li {
+                display: inline-flex;
+            }
+
+            a {
+                padding-block: rem(8px);
+                font: 500 #{rem(14px)} / 150% $ff-base;
+                color: #f7f9fc;
+                @include transitions(
+                    0.3s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
+                @include hover {
+                    color: #adb8ed;
+                }
+            }
+        }
+    }
+
+    &__link {
+        font: 500 #{rem(14px)} / 150% $ff-base;
+        color: #f7f9fc;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include hover {
+            color: #adb8ed;
+        }
+    }
+
+    &__routes {
+        &:first-child {
+            grid-column: span 2;
+        }
+    }
+
+    &__subtitle {
+        font: 500 #{rem(14px)} / 150% $ff-base;
+        margin-bottom: rem(4px);
+        color: #adb8ed;
+    }
+
+    &__soc {
+        display: flex;
+        align-items: center;
+        gap: rem(16px);
+
+        li {
+            display: inline-flex;
+            flex-shrink: 0;
+            width: rem(40px);
+            height: rem(40px);
+        }
+        a {
+            width: 100%;
+            height: 100%;
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+            @include hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &__copy {
+        padding-block: rem(24px) rem(16px);
+        border-top: 1px solid #34407d;
+        p {
+            text-align: center;
+            font: 400 #{rem(13px)} / 150% $ff-base;
+            color: #adb8ed;
+        }
+    }
+}

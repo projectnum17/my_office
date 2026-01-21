@@ -1,0 +1,29 @@
+@use '../../base/media' as *;
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+
+.subscribe {
+    margin-bottom: var(--section-pdd);
+}
+
+.subscribe-box {
+    &__head {
+        display: flex;
+        align-items: center;
+        gap: rem(16px);
+        margin-bottom: rem(16px);
+
+        .content-title {
+            font-size: rem(30px);
+        }
+    }
+
+    &__text {
+        font: 400 #{rem(18px)} / 150% $ff-base;
+        margin-bottom: rem(32px);
+    }
+
+    .hidden-title {
+        display: none;
+    }
+}

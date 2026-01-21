@@ -1,0 +1,21 @@
+'use strict';
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sliderConfig = (selector) => {
+        if (typeof Swiper === 'undefined') return;
+
+        const sliderEls = document.querySelector(selector);
+
+        new Swiper(sliderEls, {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            speed: 700,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.1,
+                },
+            },
+        });
+    };
+    sliderConfig('.js-cases-slider');
+});

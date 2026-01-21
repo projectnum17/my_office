@@ -1,0 +1,107 @@
+@use '../../base/media' as *;
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+
+.contact {
+    overflow: hidden;
+    margin-bottom: var(--section-pdd);
+    position: relative;
+    &__panel {
+        &.mobile--hidden {
+            display: none;
+        }
+    }
+
+    &__descr {
+        margin-bottom: rem(32px);
+    }
+
+    &__text {
+        font: 400 #{rem(18px)} / 150% $ff-base;
+    }
+
+    &__soc {
+        display: flex;
+        align-items: center;
+        gap: rem(24px);
+        margin-bottom: rem(24px);
+
+        li {
+            display: inline-flex;
+            width: rem(40px);
+            height: rem(40px);
+
+            a {
+                width: 100%;
+                height: 100%;
+                @include transitions(
+                    0.3s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
+                @include hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    &__phone {
+        font: 400 #{rem(16px)} / 150% $ff-base;
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: rem(12px);
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include hover {
+            svg {
+                path {
+                    &:first-child {
+                        fill: #fff;
+                    }
+                    &:last-child {
+                        fill: #34407d;
+                    }
+                }
+            }
+        }
+
+        svg {
+            width: rem(48px);
+            height: rem(48px);
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+            path {
+                @include transitions(
+                    0.3s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
+                &:first-child {
+                    fill: #34407d;
+                }
+                &:last-child {
+                    fill: #9dd0ff;
+                }
+            }
+        }
+    }
+
+    &__bg {
+        pointer-events: none;
+        position: absolute;
+        top: rem(-10px);
+        right: rem(-10px);
+    }
+
+    .content-title {
+        margin-bottom: rem(16px);
+    }
+
+    .hidden-title {
+        display: none;
+    }
+
+    .feedback-form {
+        margin-bottom: rem(32px);
+    }
+}

@@ -1,0 +1,127 @@
+@use '../../base/media' as *;
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+
+.hero-home {
+    display: grid;
+    position: relative;
+    min-height: calc(100vh - #{rem(84px)});
+    min-height: calc(100svh - #{rem(84px)});
+    margin-bottom: rem(48px);
+
+    @include hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            800px circle at var(--x) var(--y),
+            rgba(255, 255, 255, 0.5),
+            transparent 40%
+        );
+        z-index: 2;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        mix-blend-mode: overlay;
+    }
+
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: rem(20px);
+        padding-block: rem(53px);
+    }
+
+    &__title {
+        font: 700 #{rem(34px)} / 125% $ff-base;
+        margin-bottom: rem(32px);
+    }
+
+    &__text {
+        font: 400 #{rem(18px)} / 145% $ff-base;
+        display: inline-flex;
+        gap: rem(12px);
+        &::before {
+            display: flex;
+            content: '';
+            width: 2px;
+            border-radius: 2px;
+            background: #4a9fee66;
+        }
+    }
+
+    &__descr {
+        gap: rem(20px);
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            gap: rem(24px);
+            justify-content: space-between;
+
+            &:nth-child(2) {
+                padding-inline: rem(23px);
+                margin-inline: rem(23px);
+                position: relative;
+
+                &::after,
+                &::before {
+                    content: '';
+                    position: absolute;
+                    height: 80%;
+                    width: 2px;
+                    bottom: 0;
+                    background: #4a9fee66;
+                }
+
+                &::before {
+                    left: 0;
+                }
+
+                &::after {
+                    right: 0;
+                }
+            }
+
+            img {
+                width: rem(32px);
+                height: rem(32px);
+            }
+
+            span {
+                font: 400 #{rem(36px)} / 100% $ff-base;
+                letter-spacing: 0.4px;
+                color: #9dd0ff;
+            }
+
+            p {
+                font: 400 #{rem(16px)} / 150% $ff-base;
+            }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
