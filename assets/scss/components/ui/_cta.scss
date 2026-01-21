@@ -11,6 +11,10 @@
     overflow: hidden;
     justify-content: center;
     @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    @include media('laptop') {
+        font-size: rem(18px);
+        padding: rem(12px) rem(32px);
+    }
 
     &::after,
     &::before {

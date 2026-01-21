@@ -22,6 +22,36 @@ document.addEventListener('DOMContentLoaded', () => {
                         </button>`;
             },
         },
+        on: {
+            init: function () {
+                const secondPagination = document.querySelector(
+                    '.js-workspace-pag-bull',
+                );
+                if (secondPagination) {
+                    for (let i = 0; i < this.slides.length; i++) {
+                        const bullet = document.createElement('span');
+                        bullet.classList.add('swiper-pagination-bullet');
+                        if (i === 0)
+                            bullet.classList.add(
+                                'swiper-pagination-bullet-active',
+                            );
+                        bullet.addEventListener('click', () => this.slideTo(i));
+                        secondPagination.appendChild(bullet);
+                    }
+                }
+            },
+            slideChange: function () {
+                const bullets = document.querySelectorAll(
+                    '.js-workspace-pag-bull .swiper-pagination-bullet',
+                );
+                bullets.forEach((bullet, index) => {
+                    bullet.classList.toggle(
+                        'swiper-pagination-bullet-active',
+                        index === this.activeIndex,
+                    );
+                });
+            },
+        },
     });
 
     sliderEl.addEventListener('click', (e) => {

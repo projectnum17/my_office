@@ -4,6 +4,7 @@
 
 .workspace {
     margin-bottom: var(--section-pdd);
+    overflow: hidden;
 
     &__head {
         display: flex;
@@ -24,7 +25,68 @@
         height: auto;
     }
 
+    .lines-wrapper {
+        max-width: rem(375px);
+        margin: 0 auto;
+        position: relative;
+        &__item {
+            background: #4a9fee66;
+            width: 1px;
+            height: rem(110px);
+            z-index: -1;
+            position: absolute;
+
+            &.frst-el {
+                top: 20%;
+                left: 50%;
+            }
+            &.scnd-el {
+                right: 28%;
+                top: 29%;
+                transform: rotate(65deg);
+            }
+            &.thrd-el {
+                right: 38%;
+                bottom: 18%;
+                transform: rotate(-40deg);
+            }
+            &.frth-el {
+                left: 38%;
+                bottom: 20%;
+                transform: rotate(45deg);
+            }
+            &.ffth-el {
+                left: 25%;
+                top: 25%;
+                transform: rotate(-62deg);
+            }
+        }
+    }
+
     &__pagination {
+        max-width: rem(375px);
+        margin: 0 auto;
+        min-height: rem(350px);
+        position: relative;
+        margin-bottom: rem(32px);
+
+        &::after {
+            content: attr(data-circle-content);
+            width: rem(110px);
+            height: rem(110px);
+            position: absolute;
+            top: 53%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            text-align: center;
+            color: #9dd0ff;
+            background: #323871;
+        }
+
         &-item {
             border-radius: 50%;
             align-items: center;
@@ -43,10 +105,70 @@
                 0.5s,
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
             );
+
+            @include hover {
+                border: 0.42px solid #4a9fee66;
+                color: #272d69;
+                background: #edf3f9 !important;
+            }
+
             &.swiper-pagination-bullet-active {
                 border: 0.42px solid #4a9fee66;
                 color: #272d69;
                 background: #edf3f9 !important;
+            }
+
+            &:first-child {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &:nth-child(2) {
+                position: absolute;
+                right: 0;
+                top: rem(90px);
+            }
+            &:nth-child(3) {
+                position: absolute;
+                right: rem(43px);
+                bottom: 0;
+            }
+            &:nth-child(4) {
+                position: absolute;
+                left: rem(43px);
+                bottom: 0;
+            }
+            &:nth-child(5) {
+                position: absolute;
+                left: 0;
+                top: rem(90px);
+            }
+        }
+
+        &-bull {
+            min-height: rem(12px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: rem(14px);
+            gap: rem(5px);
+            .swiper-pagination-bullet {
+                width: rem(10px);
+                height: rem(10px);
+                opacity: 1 !important;
+                background: #34407d !important;
+                @include transitions(
+                    0.3s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
+
+                &.swiper-pagination-bullet-active {
+                    width: rem(12px);
+                    height: rem(12px);
+                    background: #717bb1 !important;
+                }
             }
         }
     }

@@ -19,6 +19,11 @@
         display: none;
     }
     @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    @include media('laptop') {
+        backdrop-filter: blur(8px);
+        box-shadow: -5px -5px 250px 0px #ffffff05 inset;
+        background: #32387199;
+    }
 
     &.is-show {
         transform: translateY(0);
@@ -43,6 +48,19 @@
         border-radius: 50%;
         background: #34407d;
 
+        &.laptop--hidden {
+            @include media('laptop') {
+                display: none;
+            }
+        }
+
+        &.laptop--visible {
+            display: none;
+            @include media('laptop') {
+                display: inline-flex;
+            }
+        }
+
         svg {
             display: inline-flex;
             flex-shrink: 0;
@@ -60,6 +78,10 @@
     &__content {
         padding-block: rem(65px) rem(40px);
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('laptop') {
+            max-width: rem(793px);
+            margin: 0 auto;
+        }
 
         &.is-hide {
             padding: 0;
@@ -85,6 +107,9 @@
                     flex-direction: column;
                     gap: rem(24px);
                     margin-bottom: rem(48px);
+                    @include media('desktop') {
+                        gap: rem(40px);
+                    }
                 }
             }
         }
@@ -112,6 +137,11 @@
                 transition: box-shadow 0.3s ease;
                 border-bottom: 1px solid #717bb1;
 
+                @include media('desktop') {
+                    font-size: rem(14px);
+                    padding: rem(16px) rem(12px);
+                }
+
                 &::placeholder {
                     color: #adb8ed;
                 }
@@ -137,6 +167,9 @@
         &__title {
             font: 400 #{rem(14px)} / 150% $ff-base;
             padding-left: rem(4px);
+            @include media('desktop') {
+                font-size: rem(16px);
+            }
         }
 
         &__check {
@@ -228,6 +261,9 @@
         height: 70%;
         background: $dark_indigo;
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('desktop') {
+            max-width: rem(743px);
+        }
 
         &.is-show {
             pointer-events: all;
@@ -244,6 +280,45 @@
             font: 500 #{rem(22px)} / 130% $ff-base;
             letter-spacing: 0.4px;
             text-align: center;
+        }
+    }
+}
+
+.feedback-modal {
+    .feedback-form__content {
+        @include media('laptop') {
+            position: relative;
+            padding: rem(64px) rem(64px) rem(46px) rem(64px);
+            border-radius: rem(48px);
+            background: #323871;
+            border: 1px solid #4a9fee66;
+        }
+    }
+
+    @include media('laptop') {
+        .form-data {
+            form {
+                padding: 0;
+                background: transparent;
+                border-radius: 0;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .feedback-form__title {
+            font: 400 #{rem(24px)} / 140% $ff-base;
+            margin-bottom: rem(32px);
+        }
+    }
+
+    @include media('desktop') {
+        .cta {
+            max-width: rem(260px);
         }
     }
 }

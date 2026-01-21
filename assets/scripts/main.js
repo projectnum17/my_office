@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!triggers.length || !formBox) return;
 
-        const closeBox = formBox.querySelector('.js-feedback-close');
+        const closeBox = formBox.querySelectorAll('.js-feedback-close');
         const formContent = formBox.querySelector('.js-form-content');
         const form = formBox.querySelector('form');
 
@@ -83,16 +83,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const showMessage = (windowEl, time = 3000) => {
             windowEl.classList.add('is-show');
+
+            windowEl.addEventListener('click', () => {
+                windowEl.classList.remove('is-show');
+                formContent.classList.remove('is-hide');
+            });
+
             setTimeout(() => {
                 windowEl.classList.remove('is-show');
                 formContent.classList.remove('is-hide');
             }, time);
         };
 
+        formBox.addEventListener('click', (e) => {
+            if (!formContent.contains(e.target)) {
+                closeForm();
+            }
+        });
+
         triggers.forEach((trigger) => {
             trigger.addEventListener('click', openForm);
         });
-        closeBox.addEventListener('click', closeForm);
+
+        closeBox.forEach((btn) => {
+            btn.addEventListener('click', closeForm);
+        });
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
