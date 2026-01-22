@@ -57,50 +57,6 @@
         }
     }
 
-    &__card {
-        padding: rem(16px);
-        border-radius: rem(24px);
-        background: #323871;
-        @include media('desktop') {
-            padding: rem(24px);
-            border-radius: rem(32px);
-        }
-
-        &-head {
-            display: flex;
-            align-items: center;
-            gap: rem(16px);
-            margin-bottom: rem(16px);
-            @include media('desktop') {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            img {
-                width: rem(32px);
-                height: rem(32px);
-                @include media('desktop') {
-                    width: rem(48px);
-                    height: rem(48px);
-                }
-            }
-        }
-
-        &-title {
-            font: 500 #{rem(18px)} / 150% $ff-base;
-            @include media('desktop') {
-                font-size: rem(24px);
-            }
-        }
-
-        &-text {
-            font: 400 #{rem(16px)} / 150% $ff-base;
-            @include media('desktop') {
-                font-size: rem(18px);
-            }
-        }
-    }
-
     .cta {
         width: 100%;
 
