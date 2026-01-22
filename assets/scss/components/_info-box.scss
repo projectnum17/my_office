@@ -25,6 +25,9 @@
         padding: rem(70px) rem(32px) rem(64px);
         border-radius: rem(1px) rem(40px) rem(1px) rem(40px);
     }
+    @include media('desktop') {
+        min-height: rem(258px);
+    }
 
     @include hover {
         background: $lgth_color;
@@ -183,6 +186,9 @@
         opacity: 0;
 
         p {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
             @include transitions(
                 0.5s,
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
