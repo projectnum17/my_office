@@ -1,0 +1,134 @@
+@use '../../base/media' as *;
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+
+.space {
+    margin-bottom: var(--section-pdd);
+
+    .content-title {
+        max-width: rem(716px);
+    }
+
+    &__info {
+        max-width: rem(806px);
+        display: flex;
+        flex-direction: column;
+        gap: rem(16px);
+        margin-bottom: rem(32px);
+        @include media('laptop') {
+            gap: rem(32px);
+            margin-bottom: rem(80px);
+        }
+    }
+
+    &__texts {
+        p {
+            font: 400 #{rem(16px)} / 150% $ff-base;
+            @include media('laptop') {
+                font-size: rem(24px);
+            }
+        }
+    }
+
+    &__subtitle {
+        font: 500 #{rem(16px)} / 140% $ff-base;
+        margin-bottom: rem(16px);
+        @include media('laptop') {
+            font-size: rem(24px);
+            margin-bottom: rem(56px);
+        }
+    }
+
+    &__boxes {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16px);
+        margin-bottom: rem(32px);
+        @include media('laptop') {
+            margin-bottom: rem(56px);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: rem(32px);
+        }
+        @include media('desktop') {
+            gap: rem(64px);
+        }
+    }
+
+    &__box {
+        border-radius: rem(24px);
+        padding: rem(40px) rem(16px);
+        background: #323871;
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('laptop') {
+            padding: rem(32px);
+        }
+
+        @include hover {
+            background: #34407d;
+            .space__title {
+                color: #9dd0ff;
+            }
+            .space__ico {
+                background: #323871;
+            }
+        }
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        gap: rem(12px);
+        margin-bottom: rem(12px);
+        @include media('laptop') {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: rem(24px);
+            margin-bottom: rem(24px);
+        }
+    }
+
+    &__ico {
+        width: 32px;
+        height: 32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        border-radius: rem(8px);
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('laptop') {
+            width: rem(40px);
+            height: rem(40px);
+        }
+
+        img {
+            width: rem(18px);
+            height: rem(18px);
+            flex-shrink: 0;
+            @include media('laptop') {
+                width: rem(24px);
+                height: rem(24px);
+            }
+        }
+    }
+
+    &__title {
+        font: 500 #{rem(18px)} / 140% $ff-base;
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('laptop') {
+            font-size: rem(24px);
+        }
+    }
+
+    &__descr {
+        font: 400 #{rem(16px)} / 150% $ff-base;
+    }
+
+    .cta {
+        width: 100%;
+        @include media('laptop') {
+            max-width: rem(260px);
+        }
+    }
+}
