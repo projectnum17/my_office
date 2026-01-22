@@ -1,0 +1,168 @@
+@use '../../base/media' as *;
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+
+.design-step {
+    margin-bottom: var(--section-pdd);
+
+    .container {
+        @include media('laptop') {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: rem(40px);
+        }
+    }
+
+    &__route {
+        @include media('laptop') {
+            width: 50%;
+        }
+        @include media('desktop') {
+            max-width: rem(713px);
+            width: 100%;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16px);
+        margin-bottom: rem(32px);
+        @include media('laptop') {
+            margin-bottom: 0;
+            gap: rem(32px);
+            width: 50%;
+        }
+
+        @include media('desktop') {
+            max-width: rem(798px);
+            width: 100%;
+        }
+    }
+
+    &__text {
+        font: 400 #{rem(18px)} / 145% $ff-base;
+        @include media('laptop') {
+            margin-bottom: rem(24px);
+        }
+    }
+
+    &__subtitle {
+        font: 500 #{rem(22px)} / 130% $ff-base;
+        letter-spacing: 0.4px;
+        margin-bottom: rem(24px);
+        @include media('laptop') {
+            font-size: rem(40px);
+            margin-bottom: rem(48px);
+        }
+    }
+
+    &__list {
+        counter-reset: step;
+        display: flex;
+        flex-direction: column;
+        gap: rem(16px);
+        padding-left: rem(20px);
+        position: relative;
+        margin-bottom: rem(32px);
+        @include media('laptop') {
+            margin-bottom: 0;
+        }
+
+        @include media('desktop') {
+            gap: rem(56px);
+            padding: 0;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background-image: linear-gradient(
+                to bottom,
+                #717bb1 0%,
+                #717bb1 50%,
+                transparent 50%,
+                transparent 100%
+            );
+            border-radius: rem(2px);
+            background-size: 1px 30px;
+            background-repeat: repeat-y;
+            @include media('desktop') {
+                position: absolute;
+                left: rem(24px);
+                z-index: -1;
+                height: 90%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__item {
+        @include media('desktop') {
+            display: grid;
+            grid-template-columns: 1fr rem(400px);
+            gap: rem(16px);
+        }
+    }
+
+    &__title {
+        font: 500 #{rem(18px)} / 140% $ff-base;
+        margin-bottom: rem(17px);
+        counter-increment: step;
+        display: inline-flex;
+        align-items: center;
+        gap: rem(12px);
+        @include media('desktop') {
+            margin-bottom: 0;
+            gap: rem(16px);
+        }
+
+        &::before {
+            flex-shrink: 0;
+            font: 500 #{rem(22px)} / 130% $ff-base;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: rem(40px);
+            height: rem(40px);
+            content: counter(step);
+            border-radius: rem(4px);
+            color: #9dd0ff;
+            background: #323871;
+            @include media('desktop') {
+                width: rem(48px);
+                height: rem(48px);
+                font-size: rem(28px);
+            }
+        }
+    }
+
+    &__descr {
+        font: 400 #{rem(16px)} / 150% $ff-base;
+        @include media('desktop') {
+            font-size: rem(14px);
+        }
+    }
+
+    .cta {
+        width: 100%;
+
+        &.desktop--visible {
+            display: none;
+            @include media('laptop') {
+                display: inline-flex;
+                max-width: rem(260px);
+            }
+        }
+        &.desktop--hidden {
+            @include media('laptop') {
+                display: none;
+            }
+        }
+    }
+}

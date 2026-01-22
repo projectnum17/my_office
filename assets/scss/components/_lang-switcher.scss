@@ -23,6 +23,9 @@
                 visibility: visible;
                 transform: translateY(100%);
             }
+            .lang-switcher__label {
+                color: rgba(0, 0, 0, 0);
+            }
         }
     }
 
@@ -60,6 +63,16 @@
 
     &__label {
         font: 500 #{rem(16px)} / 150% $ff-base;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        background: linear-gradient(
+            135.3deg,
+            #ffffff 0.01%,
+            rgba(75, 159, 238, 0.8) 122.61%
+        );
+
+        background-size: 100% 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
     }
 
     &__list {

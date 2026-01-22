@@ -162,8 +162,8 @@
 
     &__burger {
         position: relative;
-        width: rem(40px);
-        height: rem(40px);
+        width: rem(32px);
+        height: rem(32px);
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         @include media('laptop') {
             display: none;
@@ -196,7 +196,7 @@
             transition: inherit;
 
             &:nth-child(1) {
-                top: rem(12px);
+                top: rem(9px);
 
                 .hamburger.is-active &,
                 .w-nav-button.w--open & {
@@ -216,7 +216,7 @@
             }
 
             &:nth-child(3) {
-                bottom: rem(12px);
+                bottom: rem(8px);
 
                 .hamburger.is-active &,
                 .w-nav-button.w--open & {
@@ -254,9 +254,11 @@
     }
 
     .cta {
+        padding: rem(8px) rem(23px);
         z-index: 2;
         @include media('laptop') {
             gap: rem(8px);
+            padding: rem(13px) rem(23px);
         }
         img {
             display: none;
