@@ -4,6 +4,8 @@
 
 .design-step {
     margin-bottom: var(--section-pdd);
+    position: relative;
+    overflow: hidden;
 
     .container {
         @include media('laptop') {
@@ -163,6 +165,19 @@
             @include media('laptop') {
                 display: none;
             }
+        }
+    }
+
+    &__bg {
+        display: none;
+        @include media('laptop') {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: rem(500px);
+            height: rem(500px);
+            object-fit: cover;
         }
     }
 }
