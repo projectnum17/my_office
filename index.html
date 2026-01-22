@@ -4,10 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
     <title>WeOffice | Home</title>
     <!-- STYLES -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
@@ -16,10 +12,10 @@
     <!-- SCRIPTS -->
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script defer src="./assets/scripts/mods/servicesTabs.js"></script>
-    <script defer src="./assets/scripts/mods/heroHome.js"></script>
+    <script defer src="./assets/scripts/mods/lightCursor.js"></script>
     <script defer src="./assets/scripts/mods/casesSlider.js"></script>
     <script defer src="./assets/scripts/mods/workspaceSlider.js"></script>
-    <script defer src="./assets/scripts/mods/subsForm.js"></script>
+    <script defer src="./assets/scripts/mods/seclectInit.js"></script>
     <script defer src="./assets/scripts/main.js"></script>
 </head>
 
@@ -123,8 +119,8 @@
             </div>
         </div>
     </header>
-    <main class="main">
-        <section class="hero-home js-cursor">
+    <main class="main js-cursor">
+        <section class="hero-home js-cursor-hidden">
             <div class="container">
                 <div class="hero-home__head">
                     <h1 class="hero-home__title">
@@ -1061,34 +1057,34 @@
                     <div class="form-data form-data--simple">
                         <form>
                             <div class="form-data__fields">
-                                <div class="form-data__field">
-                                    <label for="contactName" class="form-data__title">Your Name*</label>
+                                <div class="text-field">
+                                    <label for="contactName" class="text-field__title">Your Name*</label>
                                     <input required type="text" name="contactName" id="contactName"
                                         placeholder="Enter Your Name">
                                 </div>
-                                <div class="form-data__field">
-                                    <label for="contactEmail" class="form-data__title">Your e-mail*</label>
+                                <div class="text-field">
+                                    <label for="contactEmail" class="text-field__title">Your e-mail*</label>
                                     <input required type="text" name="contactEmail" id="contactEmail"
                                         placeholder="Enter Your e-mail">
                                 </div>
-                                <div class="form-data__field">
-                                    <label for="contactPhone" class="form-data__title">Your Phone</label>
+                                <div class="text-field">
+                                    <label for="contactPhone" class="text-field__title">Your Phone</label>
                                     <input type="text" name="contactPhone" id="contactPhone"
                                         placeholder="Enter Your Phone">
                                 </div>
-                                <div class="form-data__field">
-                                    <label for="contactMess" class="form-data__title">Message</label>
+                                <div class="text-field">
+                                    <label for="contactMess" class="text-field__title">Message</label>
                                     <textarea name="contactMess" id="contactMess"
                                         placeholder="Enter Your Message (optional)"></textarea>
                                 </div>
-                                <div class="form-data__check">
+                                <div class="field-check">
                                     <input type="checkbox" id="contactTerms">
-                                    <label for="contactTerms" class="form-data__ex">
+                                    <label for="contactTerms" class="field-check__ex">
                                         I accept the <a target="_blank" href="javascript: void(0)">GDPR Terms</a>
                                     </label>
                                 </div>
                             </div>
-                            <button type="submit" class="form-data__submit cta">
+                            <button type="submit" class="cta">
                                 Send
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -1151,18 +1147,18 @@
                     <div class="subscribe-form">
                         <form>
                             <div class="subscribe-form__fields">
-                                <div class="subscribe-form__field">
-                                    <label for="subsEmail" class="subscribe-form__title">
+                                <div class="text-field">
+                                    <label for="subsEmail" class="text-field__title">
                                         Your e-mail*
                                     </label>
                                     <input required type="text" name="subsEmail" id="subsEmail"
                                         placeholder="Enter Your e-mail">
                                 </div>
-                                <div class="subscribe-form__field">
-                                    <label for="subsCountry" class="subscribe-form__title">
+                                <div class="text-field text-field--select">
+                                    <label for="subsCountry" class="text-field__title">
                                         Your Counrty/Region*
                                     </label>
-                                    <select class="subscribe-form__dd js-select" id="subsCountry" name="subsCountry">
+                                    <select class="js-select" id="subsCountry" name="subsCountry">
                                         <option value="" disabled selected>
                                             Choose your Counrty/Region
                                         </option>
@@ -1183,9 +1179,9 @@
                                     </svg>
                                 </button>
                             </div>
-                            <div class="subscribe-form__check">
+                            <div class="field-check">
                                 <input type="checkbox" id="subsTerms">
-                                <label for="subsTerms" class="subscribe-form__ex">
+                                <label for="subsTerms" class="field-check__ex">
                                     I accept the <a target="_blank" href="javascript: void(0)">GDPR Terms</a>
                                 </label>
                             </div>
@@ -1330,7 +1326,7 @@
         <img src="./assets/imgs/dots-mask.png" class="mobile-menu__bg" />
     </div>
     <div class="feedback-form feedback-modal js-feedback-form">
-        <button type="button" class="feedback-form__close laptop--hidden js-feedback-close">
+        <button type="button" class="close-form laptop--hidden js-feedback-close">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M6.39941 18.3084L5.69141 17.6004L11.2914 12.0004L5.69141 6.40038L6.39941 5.69238L11.9994 11.2924L17.5994 5.69238L18.3074 6.40038L12.7074 12.0004L18.3074 17.6004L17.5994 18.3084L11.9994 12.7084L6.39941 18.3084Z"
@@ -1339,46 +1335,46 @@
         </button>
         <div class="container">
             <div class="feedback-form__content js-form-content">
-                <button type="button" class="feedback-form__close laptop--visible js-feedback-close">
+                <button type="button" class="close-form laptop--visible js-feedback-close">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M6.39941 18.3084L5.69141 17.6004L11.2914 12.0004L5.69141 6.40038L6.39941 5.69238L11.9994 11.2924L17.5994 5.69238L18.3074 6.40038L12.7074 12.0004L18.3074 17.6004L17.5994 18.3084L11.9994 12.7084L6.39941 18.3084Z"
                             fill="#F7F9FC" />
                     </svg>
                 </button>
-                <p class="feedback-form__title">
+                <p class="form-title">
                     Fill out the form and our team will get back to you as soon as possible. We look forward to hearing
                     from you!
                 </p>
                 <div class="form-data form-data--simple">
                     <form>
                         <div class="form-data__fields">
-                            <div class="form-data__field">
-                                <label for="formName" class="form-data__title">Your Name*</label>
+                            <div class="text-field">
+                                <label for="formName" class="text-field__title">Your Name*</label>
                                 <input required type="text" name="formName" id="formName" placeholder="Enter Your Name">
                             </div>
-                            <div class="form-data__field">
-                                <label for="formEmail" class="form-data__title">Your e-mail*</label>
+                            <div class="text-field">
+                                <label for="formEmail" class="text-field__title">Your e-mail*</label>
                                 <input required type="text" name="formEmail" id="formEmail"
                                     placeholder="Enter Your e-mail">
                             </div>
-                            <div class="form-data__field">
-                                <label for="formPhone" class="form-data__title">Your Phone</label>
+                            <div class="text-field">
+                                <label for="formPhone" class="text-field__title">Your Phone</label>
                                 <input type="text" name="formPhone" id="formPhone" placeholder="Enter Your Phone">
                             </div>
-                            <div class="form-data__field">
-                                <label for="formMess" class="form-data__title">Message</label>
+                            <div class="text-field">
+                                <label for="formMess" class="text-field__title">Message</label>
                                 <textarea name="formMess" id="formMess"
                                     placeholder="Enter Your Message (optional)"></textarea>
                             </div>
-                            <div class="form-data__check">
+                            <div class="text-field__check">
                                 <input type="checkbox" id="termsInclude">
-                                <label for="termsInclude" class="form-data__ex">
+                                <label for="termsInclude" class="text-field__ex">
                                     I accept the <a target="_blank" href="javascript: void(0)">GDPR Terms</a>
                                 </label>
                             </div>
                         </div>
-                        <button type="submit" class="form-data__submit cta">
+                        <button type="submit" class="cta">
                             Send
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">

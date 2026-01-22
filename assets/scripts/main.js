@@ -118,11 +118,14 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const submitHandler = () => {
-        const form = document.querySelector('form');
-        if (!form) return;
+        const forms = document.querySelectorAll('form');
+        if (!forms.length) return;
 
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
+        forms.forEach((form) => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                form.reset();
+            });
         });
     };
 

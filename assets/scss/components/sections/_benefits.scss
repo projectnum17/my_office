@@ -1,0 +1,141 @@
+@use '../../base/media' as *;
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+
+.benefits {
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16px);
+        margin-bottom: rem(32px);
+        max-width: rem(902px);
+        @include media('desktop') {
+            gap: rem(32px);
+            margin-bottom: rem(56px);
+        }
+    }
+
+    &__text {
+        font: 400 #{rem(18px)} / 145% $ff-base;
+    }
+
+    &__box {
+        @include media('desktop') {
+            padding: rem(56px);
+            border-radius: rem(1px) rem(48px) rem(1px) rem(48px);
+            background: #323871;
+        }
+    }
+
+    &__list {
+        margin-bottom: rem(32px);
+        padding: rem(19px) rem(16px);
+        border-radius: rem(24px);
+        display: flex;
+        gap: rem(16px);
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        background: #323871;
+
+        @include media('laptop') {
+            overflow: initial;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: rem(40px);
+            padding: rem(40px);
+        }
+        @include media('desktop') {
+            gap: rem(40px) rem(66px);
+            padding: 0;
+            border-radius: 0;
+            background-color: transparent;
+        }
+    }
+
+    &__item {
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+        min-width: rem(280px);
+        display: flex;
+        flex-direction: column;
+        gap: rem(16px);
+        @include media('laptop') {
+            min-width: inherit;
+            padding: rem(12px);
+            border-radius: rem(12px);
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+
+            @include hover {
+                background: #272d69;
+
+                .benefits__title {
+                    color: rgba(0, 0, 0, 0);
+                }
+            }
+        }
+        @include media('desktop') {
+            gap: rem(24px);
+            padding: rem(24px);
+            border-radius: rem(24px);
+        }
+    }
+
+    &__ico {
+        flex-shrink: 0;
+        width: rem(24px);
+        height: rem(24px);
+    }
+
+    &__title {
+        font: 500 #{rem(22px)} / 130% $ff-base;
+        letter-spacing: 0.4px;
+        @include media('laptop') {
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+            background: linear-gradient(
+                135.3deg,
+                #ffffff 0.01%,
+                rgba(75, 159, 238, 0.8) 122.61%
+            );
+
+            background-size: 100% 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+        @include media('desktop') {
+            font-size: rem(28px);
+        }
+    }
+
+    &__descr {
+        font: 400 #{rem(16px)} / 150% $ff-base;
+        margin-top: auto;
+        @include media('laptop') {
+            margin-top: 0;
+        }
+        @include media('desktop') {
+            font-size: rem(18px);
+        }
+    }
+
+    .cta {
+        width: 100%;
+        @include media('laptop') {
+            max-width: rem(260px);
+        }
+        @include media('desktop') {
+            z-index: 2;
+        }
+    }
+}

@@ -3,7 +3,7 @@
 @use '../../base/mixins' as *;
 
 .hidden-title {
-    font: 800 #{rem(34px)} / 130% $ff-base;
+    font: 700 #{rem(34px)} / 130% $ff-base;
     opacity: 10%;
     color: #9dd0ff;
 

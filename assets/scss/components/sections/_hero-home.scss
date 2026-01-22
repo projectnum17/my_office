@@ -19,31 +19,6 @@
         padding-top: rem(190px);
     }
 
-    @include hover {
-        &::after {
-            opacity: 1;
-        }
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(
-            800px circle at var(--x) var(--y),
-            rgba(255, 255, 255, 0.5),
-            transparent 40%
-        );
-        z-index: 2;
-        pointer-events: none;
-        opacity: 0;
-        transition: opacity 0.5s ease;
-        mix-blend-mode: overlay;
-    }
-
     .container {
         height: 100%;
         display: flex;
