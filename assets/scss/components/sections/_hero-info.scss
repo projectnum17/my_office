@@ -10,6 +10,18 @@
         padding-top: rem(175px);
     }
 
+    &--lg {
+        .hero-info__head {
+            max-width: 100%;
+        }
+
+        @include media('desktop') {
+            .hero-info__descr {
+                gap: rem(40px);
+            }
+        }
+    }
+
     &__descr {
         display: flex;
         flex-direction: column;
