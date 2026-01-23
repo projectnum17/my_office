@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeOffice | Tracking</title>
+    <!-- STYLES -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/main.min.css">
+
+    <!-- SCRIPTS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script defer src="./assets/scripts/mods/lightCursor.js"></script>
+    <script defer src="./assets/scripts/mods/changeManegeSlider.js"></script>
+    <script defer src="./assets/scripts/mods/casesSlider.js"></script>
+    <script defer src="./assets/scripts/mods/seclectInit.js"></script>
+    <script defer src="./assets/scripts/mods/meetingForm.js"></script>
+    <script defer src="./assets/scripts/mods/demoForm.js"></script>
+    <script defer src="./assets/scripts/main.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="javascript: void(0)" class="header__logo">
+                <img width="91" height="38" src="./assets/imgs/ico/logo.png" alt="Logo">
+            </a>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li>
+                        <a href="javascript: void(0)">The Framework</a>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0)">Our Services</a>
+                        <div class="wrapper">
+                            <ul class="submenu">
+                                <li>
+                                    <a href="javascript: void(0)">Consultancy</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Courses</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Workplace Insight Tools</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0)">Resources</a>
+                        <div class="wrapper">
+                            <ul class="submenu">
+                                <li>
+                                    <a href="javascript: void(0)">Blogs</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Case Studies</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Press</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Events</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0)">About</a>
+                        <div class="wrapper">
+                            <ul class="submenu">
+                                <li>
+                                    <a href="javascript: void(0)">About us</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Team</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Carrer</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">GDPR</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__controls">
+                <a href="javascript: void(0)" class="header__log">Log In</a>
+                <button type="button" class="header__cta cta js-cta">
+                    Let’s Talk!
+                    <img src="./assets/imgs/ico/ico-letter.svg" alt="">
+                </button>
+                <button type="button" class="header__burger js-menu-trigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="lang-switcher">
+                    <li class="lang-switcher__current">
+                        <span class="lang-switcher__label">En</span>
+                    </li>
+                    <ul class="lang-switcher__list">
+                        <li class="lang-switcher__item lang-switcher__item--active">
+                            <span class="lang-switcher__link">
+                                <img width="16" height="12" src="./assets/imgs/ico/flag_1.png" alt="Sv">
+                                Sv
+                            </span>
+                        </li>
+                        <li class="lang-switcher__item">
+                            <a href="#!" class="lang-switcher__link">
+                                <img width="16" height="12" src="./assets/imgs/ico/flag_2.png" alt="De">
+                                De
+                            </a>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="main js-cursor">
+        <section class="hero-info hero-info--lg js-cursor-hidden">
+            <div class="container">
+                <div class="hero-info__head">
+                    <div class="hero-info__descr">
+                        <h1 class="main-title gradient-text">
+                            Workplace Insight Tools
+                        </h1>
+                        <p class="hero-info__label">
+                            Our needs assesment tools help you gain an overall understanding of your workplace and your
+                            employees’ needs.
+                        </p>
+                    </div>
+                    <a href="mailto:test@test.com" class="mail-box">
+                        <div class="mail-box__circle">
+                            <svg viewBox="0 0 100 100" width="100" height="100">
+                                <defs>
+                                    <path id="circle" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0">
+                                    </path>
+                                </defs>
+                                <circle cx="50" cy="50" r="37" fill="none" stroke="#ffffff" stroke-width="24">
+                                </circle>
+                                <text font-size="11" dy="3" style="letter-spacing: 2px;">
+                                    <textPath xlink:href="#circle">
+                                        Contact with us
+                                    </textPath>
+                                </text>
+                            </svg>
+                        </div>
+                        <div class="mail-box__ico">
+                            <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.008 2.90286C16.3659 3.70367 16.5175 4.79528 16.7782 6.67191C17.1782 9.55232 17.3782 10.9925 16.9384 12.1111C16.5523 13.0931 15.8394 13.9119 14.9199 14.4294C13.8724 15.0189 12.4184 15.0189 9.51034 15.0189H8.02064C5.11258 15.0189 3.65855 15.0189 2.61113 14.4294C1.69161 13.9119 0.97868 13.0931 0.592562 12.1111C0.152739 10.9925 0.352768 9.55232 0.752825 6.67191C0.996871 4.91478 1.14533 3.84588 1.45701 3.0595M16.008 2.90286C15.9382 2.74649 15.8604 2.6012 15.7725 2.46332C15.298 1.71962 14.6192 1.12853 13.8173 0.760921C12.9073 0.34375 11.775 0.34375 9.51034 0.34375H8.02064C5.75603 0.34375 4.62373 0.34375 3.71372 0.760921C2.91182 1.12853 2.23296 1.71962 1.75853 2.46332C1.64189 2.64616 1.54321 2.84203 1.45701 3.0595M16.008 2.90286L15.9268 2.98407L15.1398 3.77113C12.0824 6.82846 10.5538 8.35712 8.6542 8.35712C6.75462 8.35712 5.22596 6.82846 2.16864 3.77113L1.45701 3.0595"
+                                    stroke="#F7F9FC" stroke-width="0.687898"></path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <ul class="routes">
+                    <li>
+                        <a href="javascript: void(0)">
+                            <span>Survey</span>
+                            <span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                        fill="#272D69"></path>
+                                    <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
+                                        fill="#272D69"></rect>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0)">
+                            <span>Space Preferences Analysis</span>
+                            <span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                        fill="#272D69"></path>
+                                    <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
+                                        fill="#272D69"></rect>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0)" class="is-active">
+                            <span>Attendance Data</span>
+                            <span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                        fill="#272D69"></path>
+                                    <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
+                                        fill="#272D69"></rect>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0)">
+                            <span>Workplace Planning Tools</span>
+                            <span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                        fill="#272D69"></path>
+                                    <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
+                                        fill="#272D69"></rect>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <img src="./assets/imgs/dots-mask.png" alt="" class="hero-info__bg">
+        </section>
+        <section class="attendance">
+            <div class="container">
+                <div class="attendance__info">
+                    <h2 class="content-title">Attendance Data</h2>
+                    <p class="attendance__about">
+                        Gain a clear understanding of how your office is used through data from your entry system. By
+                        analysing when and how often employees are on site, we reveal occupancy patterns and trends over
+                        time. These insights enable you to optimise office space, improve resource efficiency, and
+                        design a workplace that supports both productivity and employee wellbeing.
+                    </p>
+                    <a href="javascript: void(0)" class="cta js-meeting-trigger desktop--visible">
+                        Book a meeting
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                fill="#272D69"></path>
+                            <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)" fill="#272D69">
+                            </rect>
+                        </svg>
+                    </a>
+                </div>
+                <ul class="attendance__cards">
+                    <li class="info-rec">
+                        <div class="info-rec__head">
+                            <img width="32" height="32" src="./assets/imgs/ico/l_5.svg" alt="Icon">
+                            <h3 class="info-rec__title">
+                                Understand Workplace Flows Over Time
+                            </h3>
+                        </div>
+                        <p class="info-rec__text">
+                            Analyse occupancy and movement patterns across days, weeks and months to identify trends,
+                            peak usage periods and opportunities for more efficient space utilisation.
+                        </p>
+                    </li>
+                    <li class="info-rec">
+                        <div class="info-rec__head">
+                            <img width="32" height="32" src="./assets/imgs/ico/l_6.svg" alt="Icon">
+                            <h3 class="info-rec__title">
+                                Visual Insights for Informed
+                                Decisions
+                            </h3>
+                        </div>
+                        <p class="info-rec__text">
+                            Turn complex data into clear, intuitive visualisations that make it easy to understand
+                            patterns and guide strategic workplace decisions with confidence.
+                        </p>
+                    </li>
+                </ul>
+                <a href="javascript: void(0)" class="cta js-meeting-trigger desktop--hidden">
+                    Book a meeting
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                            fill="#272D69"></path>
+                        <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)" fill="#272D69">
+                        </rect>
+                    </svg>
+                </a>
+            </div>
+            <img src="./assets/imgs/dots-mask.png" alt="" class="attendance__bg">
+        </section>
+        <section class="partners">
+            <div class="container">
+                <h2 class="content-title">Trusted by leading brands</h2>
+            </div>
+            <div class="partners__boxes partners__boxes--right">
+                <div class="partners__track">
+                    <div class="partners__set">
+                        <img src="./assets/imgs/partners/partn_1.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_2.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_3.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_4.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_5.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_6.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_1.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_2.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_3.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_4.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_5.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_6.png" alt="Partner">
+                    </div>
+                    <div class="partners__set" aria-hidden="true">
+                        <img src="./assets/imgs/partners/partn_1.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_2.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_3.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_4.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_5.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_6.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_1.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_2.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_3.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_4.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_5.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_6.png" alt="Partner">
+                    </div>
+                </div>
+            </div>
+
+            <div class="partners__boxes partners__boxes--left">
+                <div class="partners__track">
+                    <div class="partners__set">
+                        <img src="./assets/imgs/partners/partn_7.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_8.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_9.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_10.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_11.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_12.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_13.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_7.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_8.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_9.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_10.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_11.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_12.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_13.png" alt="Partner">
+                    </div>
+                    <div class="partners__set" aria-hidden="true">
+                        <img src="./assets/imgs/partners/partn_7.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_8.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_9.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_10.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_11.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_12.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_13.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_7.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_8.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_9.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_10.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_11.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_12.png" alt="Partner">
+                        <img src="./assets/imgs/partners/partn_13.png" alt="Partner">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cases">
+            <div class="container">
+                <h2 class="content-title">Case-studies</h2>
+                <div class="cases__cards swiper js-cases-slider">
+                    <div class="cases__cards-wrapper swiper-wrapper">
+                        <div class="cases__cards-slide swiper-slide">
+                            <a href="javascript: void(0)" class="cases-card">
+                                <div class="cases-card__img">
+                                    <img src="./assets/imgs/case.jpg" alt="Picture">
+                                </div>
+                                <div class="cases-card__descr">
+                                    <p class="cases-card__title">
+                                        Ett kontor med lärandet i väggarna – Sanoma Utbildning skapar rum för utveckling
+                                    </p>
+                                    <div class="cases-card__cta">
+                                        <span>Expand</span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                                fill="#272D69" />
+                                            <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
+                                                fill="#272D69" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="cases-card__text">
+                                    Bakgrunden – ett kontor som främjar lärande och samarbete Sanoma Utbildning är ett
+                                    av
+                                    Sveriges ledande kunskapsföretag, med fokus på…
+                                </p>
+                            </a>
+                        </div>
+                        <div class="cases__cards-slide swiper-slide">
+                            <a href="javascript: void(0)" class="cases-card">
+                                <div class="cases-card__img">
+                                    <img src="./assets/imgs/case.jpg" alt="Picture">
+                                </div>
+                                <div class="cases-card__descr">
+                                    <p class="cases-card__title">
+                                        Ett kontor med lärandet i väggarna – Sanoma Utbildning skapar rum för utveckling
+                                    </p>
+                                    <div class="cases-card__cta">
+                                        <span>Expand</span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                                fill="#272D69" />
+                                            <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
+                                                fill="#272D69" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="cases-card__text">
+                                    Bakgrunden – ett kontor som främjar lärande och samarbete Sanoma Utbildning är ett
+                                    av
+                                    Sveriges ledande kunskapsföretag, med fokus på…
+                                </p>
+                            </a>
+                        </div>
+                        <div class="cases__cards-slide swiper-slide">
+                            <a href="javascript: void(0)" class="cases-card">
+                                <div class="cases-card__img">
+                                    <img src="./assets/imgs/case.jpg" alt="Picture">
+                                </div>
+                                <div class="cases-card__descr">
+                                    <p class="cases-card__title">
+                                        Ett kontor med lärandet i väggarna – Sanoma Utbildning skapar rum för utveckling
+                                    </p>
+                                    <div class="cases-card__cta">
+                                        <span>Expand</span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                                fill="#272D69" />
+                                            <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
+                                                fill="#272D69" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="cases-card__text">
+                                    Bakgrunden – ett kontor som främjar lärande och samarbete Sanoma Utbildning är ett
+                                    av
+                                    Sveriges ledande kunskapsföretag, med fokus på…
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="javascript: void(0)" class="cta">
+                    Read all cases
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                            fill="#272D69"></path>
+                        <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)" fill="#272D69"></rect>
+                    </svg>
+                </a>
+            </div>
+            <img src="./assets/imgs/dots-mask.png" alt="" class="cases__bg">
+        </section>
+        <section class="contact">
+            <div class="container">
+                <div class="contact__descr">
+                    <h2 class="content-title">We’d love to hear from you!</h2>
+                    <p class="contact__text">
+                        Have a question or would you like to get in contact with our team? Fill in the form and we’ll
+                        get
+                        back to you as soon as we can. <br>
+                        We look forward to hearing from you.
+                    </p>
+                    <div class="contact__panel mobile--hidden">
+                        <ul class="contact__soc">
+                            <li>
+                                <a href="javascript: void(0)" target="_blank">
+                                    <img src="./assets/imgs/ico/ico-tube.svg" alt="YouTube">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0)" target="_blank">
+                                    <img src="./assets/imgs/ico/ico-link.svg" alt="LinkedIn">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:test@test.com">
+                                    <img src="./assets/imgs/ico/ico-mail.svg" alt="Email">
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="tel:+000000" class="contact__phone">
+                            0046-739793663
+                            <img src="./assets/imgs/ico/ico-phone.svg" alt="Phone">
+                        </a>
+                    </div>
+                    <p class="hidden-title">Contact us</p>
+                </div>
+                <div class="feedback-form">
+                    <div class="form-data form-data--simple">
+                        <form>
+                            <div class="form-data__fields">
+                                <div class="text-field">
+                                    <label for="contactName" class="text-field__title">Your Name*</label>
+                                    <input required type="text" name="contactName" id="contactName"
+                                        placeholder="Enter Your Name">
+                                </div>
+                                <div class="text-field">
+                                    <label for="contactEmail" class="text-field__title">Your e-mail*</label>
+                                    <input required type="text" name="contactEmail" id="contactEmail"
+                                        placeholder="Enter Your e-mail">
+                                </div>
+                                <div class="text-field">
+                                    <label for="contactPhone" class="text-field__title">Your Phone</label>
+                                    <input type="text" name="contactPhone" id="contactPhone"
+                                        placeholder="Enter Your Phone">
+                                </div>
+                                <div class="text-field">
+                                    <label for="contactMess" class="text-field__title">Message</label>
+                                    <textarea name="contactMess" id="contactMess"
+                                        placeholder="Enter Your Message (optional)"></textarea>
+                                </div>
+                                <div class="field-check">
+                                    <input type="checkbox" id="contactTerms">
+                                    <label for="contactTerms" class="field-check__ex">
+                                        I accept the <a target="_blank" href="javascript: void(0)">GDPR Terms</a>
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="cta">
+                                Send
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                        fill="#272D69" />
+                                    <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
+                                        fill="#272D69" />
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="contact__panel mobile--visible">
+                    <ul class="contact__soc">
+                        <li>
+                            <a href="javascript: void(0)" target="_blank">
+                                <img src="./assets/imgs/ico/ico-tube.svg" alt="YouTube">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0)" target="_blank">
+                                <img src="./assets/imgs/ico/ico-link.svg" alt="LinkedIn">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:test@test.com">
+                                <img src="./assets/imgs/ico/ico-mail.svg" alt="Email">
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="tel:+000000" class="contact__phone">
+                        0046-739793663
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M48 24C48 10.7452 37.2549 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2549 48 48 37.2548 48 24Z"
+                                fill="#34407D" />
+                            <path
+                                d="M34.7953 31.7996V29.8245C34.7953 28.8431 34.1978 27.9606 33.2866 27.5961L30.8457 26.6198C29.6867 26.1562 28.3659 26.6584 27.8077 27.7748L27.5953 28.1996C27.5953 28.1996 24.5953 27.5996 22.1953 25.1996C19.7953 22.7996 19.1953 19.7996 19.1953 19.7996L19.6201 19.5872C20.7366 19.029 21.2387 17.7082 20.7752 16.5492L19.7988 14.1083C19.4343 13.1971 18.5518 12.5996 17.5704 12.5996H15.5953C14.2698 12.5996 13.1953 13.6741 13.1953 14.9996C13.1953 25.6035 21.7914 34.1996 32.3953 34.1996C33.7208 34.1996 34.7953 33.1251 34.7953 31.7996Z"
+                                fill="#9DD0FF" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <img src="./assets/imgs/dots-mask.png" alt="" class="contact__bg">
+        </section>
+        <section class="subscribe">
+            <div class="container">
+                <div class="subscribe-box">
+                    <div class="subscribe-box__head">
+                        <img src="./assets/imgs/ico/ico-mail.svg" alt="Icon">
+                        <h2 class="content-title">
+                            Want more workplace insights?
+                        </h2>
+                    </div>
+                    <p class="subscribe-box__text">
+                        Stay up to date by subscribing to our newsletter, where we share new findings, tools and
+                        upcoming training opportunities.
+                    </p>
+                    <div class="subscribe-form">
+                        <form>
+                            <div class="subscribe-form__fields">
+                                <div class="text-field">
+                                    <label for="subsEmail" class="text-field__title">
+                                        Your e-mail*
+                                    </label>
+                                    <input required type="text" name="subsEmail" id="subsEmail"
+                                        placeholder="Enter Your e-mail">
+                                </div>
+                                <div class="text-field text-field--select">
+                                    <label for="subsCountry" class="text-field__title">
+                                        Your Counrty/Region*
+                                    </label>
+                                    <select class="js-select" id="subsCountry" name="subsCountry">
+                                        <option value="" disabled selected>
+                                            Choose your Counrty/Region
+                                        </option>
+                                        <option value="1">Counrty 1</option>
+                                        <option value="2">Counrty 2</option>
+                                        <option value="3">Counrty 3</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="subscribe-form__submit cta">
+                                    Subscribe
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                            fill="#272D69"></path>
+                                        <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
+                                            fill="#272D69"></rect>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="field-check">
+                                <input type="checkbox" id="subsTerms">
+                                <label for="subsTerms" class="field-check__ex">
+                                    I accept the <a target="_blank" href="javascript: void(0)">GDPR Terms</a>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <p class="hidden-title">Subscribe</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__head">
+                <div class="footer__info">
+                    <div class="footer__naming">
+                        <a href="javascript: void(0)" class="footer__logo">
+                            <img width="91" height="38" src="./assets/imgs/ico/logo.png" alt="Logo">
+                        </a>
+                        <p class="footer__title laptop--hidden">More than beautiful offices</p>
+                    </div>
+                </div>
+                <div class="footer__panel">
+                    <div class="footer__nav">
+                        <a href="javascript: void(0)" class="footer__link">The Framework</a>
+                        <div class="footer__routes">
+                            <p class="footer__subtitle">Our Services</p>
+                            <ul>
+                                <li><a href="javascript: void(0)">Consultancy</a></li>
+                                <li><a href="javascript: void(0)">Courses</a></li>
+                                <li><a href="javascript: void(0)">Needs Assesment Tools</a></li>
+                                <li><a href="javascript: void(0)">Workplace Insight Tools</a></li>
+                                <li><a href="javascript: void(0)">Workplace Planning Tools</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__routes">
+                            <p class="footer__subtitle">Resources</p>
+                            <ul>
+                                <li><a href="javascript: void(0)">Blogs</a></li>
+                                <li><a href="javascript: void(0)">Case Studies</a></li>
+                                <li><a href="javascript: void(0)">Press</a></li>
+                                <li><a href="javascript: void(0)">Events</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__routes">
+                            <p class="footer__subtitle">About</p>
+                            <ul>
+                                <li><a href="javascript: void(0)">About us</a></li>
+                                <li><a href="javascript: void(0)">Team</a></li>
+                                <li><a href="javascript: void(0)">Carrer</a></li>
+                                <li><a href="javascript: void(0)">GDPR</a></li>
+                                <li><a href="javascript: void(0)">Survey information</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="footer__soc">
+                        <li>
+                            <a href="javascript: void(0)" target="_blank">
+                                <img src="./assets/imgs/ico/ico-link.svg" alt="Linkedin">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:test@test.com">
+                                <img src="./assets/imgs/ico/ico-mail.svg" alt="Email">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0)" target="_blank">
+                                <img src="./assets/imgs/ico/ico-tube.svg" alt="YouTube">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="footer__title laptop--visible">More than beautiful offices</p>
+        </div>
+        <div class="footer__copy">
+            <div class="container">
+                <p> Copyright © 2025 WeOffice</p>
+            </div>
+        </div>
+    </footer>
+    <div class="mobile-menu js-mob-menu">
+        <div class="container">
+            <div class="mobile-menu__content">
+                <ul class="lang-switcher">
+                    <li class="lang-switcher__current">
+                        <span class="lang-switcher__label">En</span>
+                    </li>
+                    <ul class="lang-switcher__list">
+                        <li class="lang-switcher__item lang-switcher__item--active">
+                            <span class="lang-switcher__link">
+                                <img width="16" height="12" src="./assets/imgs/ico/flag_1.png" alt="Sv">
+                                Sv
+                            </span>
+                        </li>
+                        <li class="lang-switcher__item">
+                            <a href="#!" class="lang-switcher__link">
+                                <img width="16" height="12" src="./assets/imgs/ico/flag_2.png" alt="De">
+                                De
+                            </a>
+                        </li>
+                    </ul>
+                </ul>
+                <ul class="mobile-menu__list js-mob-list">
+                    <li><a href="javascript: void(0)">The Framework</a></li>
+                    <li>
+                        <a href="javascript: void(0)">Our Services</a>
+                        <div class="mobile-menu__routes">
+                            <ul class="mobile-menu__submenu">
+                                <li><a href="javascript: void(0)">Consultancy</a></li>
+                                <li><a href="javascript: void(0)">Courses</a></li>
+                                <li><a href="javascript: void(0)">Workplace Insight Tools</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0)">Resources</a>
+                        <div class="mobile-menu__routes">
+                            <ul class="mobile-menu__submenu">
+                                <li><a href="javascript: void(0)">Blogs</a></li>
+                                <li><a href="javascript: void(0)">Case Studies</a></li>
+                                <li><a href="javascript: void(0)">Press</a></li>
+                                <li><a href="javascript: void(0)">Events</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0)">About</a>
+                        <div class="mobile-menu__routes">
+                            <ul class="mobile-menu__submenu">
+                                <li><a href="javascript: void(0)">About us</a></li>
+                                <li><a href="javascript: void(0)">Team</a></li>
+                                <li><a href="javascript: void(0)">Carrer</a></li>
+                                <li><a href="javascript: void(0)">GDPR</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <a class="mobile-menu__link" href="javascript: void(0)">Log In</a>
+            </div>
+        </div>
+        <img src="./assets/imgs/dots-mask.png" class="mobile-menu__bg" />
+    </div>
+    <div class="feedback-form feedback-modal js-feedback-form">
+        <button type="button" class="close-form laptop--hidden js-feedback-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M6.39941 18.3084L5.69141 17.6004L11.2914 12.0004L5.69141 6.40038L6.39941 5.69238L11.9994 11.2924L17.5994 5.69238L18.3074 6.40038L12.7074 12.0004L18.3074 17.6004L17.5994 18.3084L11.9994 12.7084L6.39941 18.3084Z"
+                    fill="#F7F9FC" />
+            </svg>
+        </button>
+        <div class="container">
+            <div class="feedback-form__content js-form-content">
+                <button type="button" class="close-form laptop--visible js-feedback-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.39941 18.3084L5.69141 17.6004L11.2914 12.0004L5.69141 6.40038L6.39941 5.69238L11.9994 11.2924L17.5994 5.69238L18.3074 6.40038L12.7074 12.0004L18.3074 17.6004L17.5994 18.3084L11.9994 12.7084L6.39941 18.3084Z"
+                            fill="#F7F9FC" />
+                    </svg>
+                </button>
+                <p class="form-title">
+                    Fill out the form and our team will get back to you as soon as possible. We look forward to hearing
+                    from you!
+                </p>
+                <div class="form-data form-data--simple">
+                    <form>
+                        <div class="form-data__fields">
+                            <div class="text-field">
+                                <label for="formName" class="text-field__title">Your Name*</label>
+                                <input required type="text" name="formName" id="formName" placeholder="Enter Your Name">
+                            </div>
+                            <div class="text-field">
+                                <label for="formEmail" class="text-field__title">Your e-mail*</label>
+                                <input required type="text" name="formEmail" id="formEmail"
+                                    placeholder="Enter Your e-mail">
+                            </div>
+                            <div class="text-field">
+                                <label for="formPhone" class="text-field__title">Your Phone</label>
+                                <input type="text" name="formPhone" id="formPhone" placeholder="Enter Your Phone">
+                            </div>
+                            <div class="text-field">
+                                <label for="formMess" class="text-field__title">Message</label>
+                                <textarea name="formMess" id="formMess"
+                                    placeholder="Enter Your Message (optional)"></textarea>
+                            </div>
+                            <div class="field-check">
+                                <input type="checkbox" id="termsInclude">
+                                <label for="termsInclude" class="field-check__ex">
+                                    I accept the <a target="_blank" href="javascript: void(0)">GDPR Terms</a>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="cta">
+                            Send
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                    fill="#272D69" />
+                                <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
+                                    fill="#272D69" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="form-success js-submit-success">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.25 26.25L18.75 36.75L39.75 14.25" stroke="#F7F9FC" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p>Thanks! Your form was sent successfully</p>
+                <img src="./assets/imgs/dots-mask.png" alt="" class="form-success__bg">
+            </div>
+            <div class="form-error js-submit-error">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M36.6654 20V7.5H3.33203V32.5H19.9987M33.332 25.8333L26.6654 32.5M26.6654 25.8333L33.332 32.5"
+                        stroke="#EDF3F9" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.33203 7.5L19.9987 20L36.6654 7.5" stroke="#EDF3F9" stroke-width="1.2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p>
+                    Submission failed
+                    Something went wrong. Please check the details and try again
+                </p>
+                <img src="./assets/imgs/dots-mask.png" alt="" class="form-error__bg">
+            </div>
+        </div>
+        <img src="./assets/imgs/dots-mask.png" class="feedback-form__bg" />
+    </div>
+    <div class="meeting-modal js-meeting-modal">
+        <button type="button" class="close-form laptop--hidden js-meeting-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M6.39941 18.3084L5.69141 17.6004L11.2914 12.0004L5.69141 6.40038L6.39941 5.69238L11.9994 11.2924L17.5994 5.69238L18.3074 6.40038L12.7074 12.0004L18.3074 17.6004L17.5994 18.3084L11.9994 12.7084L6.39941 18.3084Z"
+                    fill="#F7F9FC" />
+            </svg>
+        </button>
+        <div class="container">
+            <div class="meeting-modal__content js-meeting-content">
+                <button type="button" class="close-form laptop--visible js-feedback-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.39941 18.3084L5.69141 17.6004L11.2914 12.0004L5.69141 6.40038L6.39941 5.69238L11.9994 11.2924L17.5994 5.69238L18.3074 6.40038L12.7074 12.0004L18.3074 17.6004L17.5994 18.3084L11.9994 12.7084L6.39941 18.3084Z"
+                            fill="#F7F9FC" />
+                    </svg>
+                </button>
+                <p class="form-title">
+                    Book a meeting
+                </p>
+                <div class="form-data">
+                    <form>
+                        <div class="form-data__fields">
+                            <div class="text-field">
+                                <label for="meetingName" class="text-field__title">Your Name*</label>
+                                <input required type="text" name="meetingName" id="meetingName"
+                                    placeholder="Enter Your Name">
+                            </div>
+                            <div class="text-field">
+                                <label for="meetingSurName" class="text-field__title">
+                                    Your Surname *
+                                </label>
+                                <input required type="text" name="meetingSurName" id="meetingSurName"
+                                    placeholder="Enter Your Surname">
+                            </div>
+                            <div class="text-field">
+                                <label for="meetingPhone" class="text-field__title">
+                                    Your Phone
+                                </label>
+                                <input type="text" name="meetingPhone" id="meetingPhone" placeholder="Enter Your Phone">
+                            </div>
+                            <div class="text-field">
+                                <label for="meetingEmail" class="text-field__title">
+                                    Your e-mail*
+                                </label>
+                                <input required type="text" name="meetingEmail" id="meetingEmail"
+                                    placeholder="Enter Your e-mail">
+                            </div>
+                            <div class="text-field">
+                                <label for="meetingOrg" class="text-field__title">
+                                    Organization*
+                                </label>
+                                <input required type="text" name="meetingOrg" id="meetingOrg"
+                                    placeholder="Enter Your Organization">
+                            </div>
+                            <div class="text-field text-field--select">
+                                <label for="meetingInterest" class="text-field__title">
+                                    Area of interests*
+                                </label>
+                                <select class="js-select" id="meetingInterest" name="meetingInterest">
+                                    <option value="" disabled selected>
+                                        Choose Area of Interests
+                                    </option>
+                                    <option value="1">Workplace strategy</option>
+                                    <option value="2">Placeholder text</option>
+                                    <option value="3">Project Management</option>
+                                    <option value="4">Facility Management</option>
+                                </select>
+                            </div>
+                            <div class="text-field">
+                                <label for="meetingMess" class="text-field__title">Message</label>
+                                <textarea name="meetingMess" id="meetingMess"
+                                    placeholder="Enter Your Message (optional)"></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="cta">
+                            Send
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                    fill="#272D69" />
+                                <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
+                                    fill="#272D69" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="form-success js-meeting-success">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.25 26.25L18.75 36.75L39.75 14.25" stroke="#F7F9FC" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p>Thanks! Your form was sent successfully</p>
+                <img src="./assets/imgs/dots-mask.png" alt="" class="form-success__bg">
+            </div>
+            <div class="form-error js-meeting-error">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M36.6654 20V7.5H3.33203V32.5H19.9987M33.332 25.8333L26.6654 32.5M26.6654 25.8333L33.332 32.5"
+                        stroke="#EDF3F9" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.33203 7.5L19.9987 20L36.6654 7.5" stroke="#EDF3F9" stroke-width="1.2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p>
+                    Submission failed
+                    Something went wrong. Please check the details and try again
+                </p>
+                <img src="./assets/imgs/dots-mask.png" alt="" class="form-error__bg">
+            </div>
+        </div>
+        <img src="./assets/imgs/dots-mask.png" class="meeting-modal__bg" />
+    </div>
+    <div class="demo-modal js-demo-modal">
+        <button type="button" class="close-form laptop--hidden js-demo-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M6.39941 18.3084L5.69141 17.6004L11.2914 12.0004L5.69141 6.40038L6.39941 5.69238L11.9994 11.2924L17.5994 5.69238L18.3074 6.40038L12.7074 12.0004L18.3074 17.6004L17.5994 18.3084L11.9994 12.7084L6.39941 18.3084Z"
+                    fill="#F7F9FC" />
+            </svg>
+        </button>
+        <div class="container">
+            <div class="demo-modal__content js-demo-content">
+                <button type="button" class="close-form laptop--visible js-feedback-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.39941 18.3084L5.69141 17.6004L11.2914 12.0004L5.69141 6.40038L6.39941 5.69238L11.9994 11.2924L17.5994 5.69238L18.3074 6.40038L12.7074 12.0004L18.3074 17.6004L17.5994 18.3084L11.9994 12.7084L6.39941 18.3084Z"
+                            fill="#F7F9FC" />
+                    </svg>
+                </button>
+                <p class="form-title">
+                    Request a demo
+                </p>
+                <div class="form-data">
+                    <form>
+                        <div class="form-data__fields">
+                            <div class="text-field">
+                                <label for="demoName" class="text-field__title">Your Name*</label>
+                                <input required type="text" name="demoName" id="demoName" placeholder="Enter Your Name">
+                            </div>
+                            <div class="text-field">
+                                <label for="demoSurName" class="text-field__title">
+                                    Your Surname *
+                                </label>
+                                <input required type="text" name="demoSurName" id="demoSurName"
+                                    placeholder="Enter Your Surname">
+                            </div>
+                            <div class="text-field">
+                                <label for="demoPhone" class="text-field__title">
+                                    Your Phone
+                                </label>
+                                <input type="text" name="demoPhone" id="demoPhone" placeholder="Enter Your Phone">
+                            </div>
+                            <div class="text-field">
+                                <label for="demoEmail" class="text-field__title">
+                                    Your e-mail*
+                                </label>
+                                <input required type="text" name="demoEmail" id="demoEmail"
+                                    placeholder="Enter Your e-mail">
+                            </div>
+                            <div class="text-field">
+                                <label for="demoOrg" class="text-field__title">
+                                    Organization*
+                                </label>
+                                <input required type="text" name="demoOrg" id="demoOrg"
+                                    placeholder="Enter Your Organization">
+                            </div>
+                            <div class="text-field text-field--select">
+                                <label for="demoInterest" class="text-field__title">
+                                    Area of interests*
+                                </label>
+                                <select class="js-select" id="demoInterest" name="demoInterest">
+                                    <option value="" disabled selected>
+                                        Choose Area of Interests
+                                    </option>
+                                    <option value="1">Workplace strategy</option>
+                                    <option value="2">Placeholder text</option>
+                                    <option value="3">Project Management</option>
+                                    <option value="4">Facility Management</option>
+                                </select>
+                            </div>
+                            <div class="text-field">
+                                <label for="demoMess" class="text-field__title">Message</label>
+                                <textarea name="demoMess" id="demoMess"
+                                    placeholder="Enter Your Message (optional)"></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="cta">
+                            Send
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                    fill="#272D69" />
+                                <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
+                                    fill="#272D69" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="form-success js-demo-success">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.25 26.25L18.75 36.75L39.75 14.25" stroke="#F7F9FC" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p>Thanks! Your form was sent successfully</p>
+                <img src="./assets/imgs/dots-mask.png" alt="" class="form-success__bg">
+            </div>
+            <div class="form-error js-demo-error">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M36.6654 20V7.5H3.33203V32.5H19.9987M33.332 25.8333L26.6654 32.5M26.6654 25.8333L33.332 32.5"
+                        stroke="#EDF3F9" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.33203 7.5L19.9987 20L36.6654 7.5" stroke="#EDF3F9" stroke-width="1.2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p>
+                    Submission failed
+                    Something went wrong. Please check the details and try again
+                </p>
+                <img src="./assets/imgs/dots-mask.png" alt="" class="form-error__bg">
+            </div>
+        </div>
+        <img src="./assets/imgs/dots-mask.png" class="meeting-modal__bg" />
+    </div>
+</body>
+
+</html>
