@@ -132,7 +132,8 @@
     .cta {
         width: 100%;
         @include media('laptop') {
-            max-width: rem(260px);
+            max-width: max-content;
+            min-width: rem(260px);
         }
         @include media('desktop') {
             z-index: 2;

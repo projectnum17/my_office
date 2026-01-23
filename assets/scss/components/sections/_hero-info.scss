@@ -6,8 +6,15 @@
     padding-top: rem(120px);
     padding-bottom: var(--section-pdd);
     position: relative;
+
     @include media('desktop') {
         padding-top: rem(175px);
+    }
+
+    &:not(:has(.routes)) {
+        .hero-info__head {
+            margin-bottom: 0;
+        }
     }
 
     &--lg {

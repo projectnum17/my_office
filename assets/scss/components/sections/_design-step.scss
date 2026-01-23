@@ -158,7 +158,8 @@
             display: none;
             @include media('laptop') {
                 display: inline-flex;
-                max-width: rem(260px);
+                max-width: max-content;
+                min-width: rem(260px);
             }
         }
         &.desktop--hidden {
@@ -178,6 +179,32 @@
             width: rem(500px);
             height: rem(500px);
             object-fit: cover;
+        }
+    }
+
+    &--simple {
+        .design-step__item {
+            @include media('desktop') {
+                display: flex;
+                gap: rem(16px);
+            }
+        }
+        .design-step__info {
+            max-width: rem(834px);
+        }
+        .design-step__text {
+            max-width: rem(700px);
+            margin-bottom: 0;
+        }
+        .design-step__list {
+            @include media('desktop') {
+                max-width: rem(633px);
+            }
+        }
+        .design-step__route {
+            @include media('desktop') {
+                padding: rem(64px) rem(52px);
+            }
         }
     }
 }

@@ -43,7 +43,8 @@
 
     @include media('desktop') {
         .cta {
-            max-width: rem(260px);
+            max-width: max-content;
+            min-width: rem(260px)
         }
     }
 
@@ -89,7 +90,7 @@
     &__bg {
         position: absolute;
         top: rem(35px);
-        right: rem(-30px);
+        right: rem(0px);
         pointer-events: none;
         z-index: -1;
         @include media('laptop') {
@@ -130,7 +131,8 @@
 
         @include media('laptop') {
             .cta {
-                max-width: rem(260px);
+                max-width: max-content;
+                min-width: rem(260px)
             }
         }
     }

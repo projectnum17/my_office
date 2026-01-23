@@ -16,7 +16,8 @@
             z-index: 2;
             width: 100%;
             @include media('desktop') {
-                max-width: rem(260px);
+                max-width: max-content;
+                min-width: rem(260px);
                 align-self: flex-end;
             }
         }

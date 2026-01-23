@@ -29,7 +29,8 @@
         width: 100%;
         margin-top: rem(32px);
         @include media('tablet') {
-            max-width: rem(260px);
+            max-width: max-content;
+            min-width: rem(260px);
         }
         @include media('laptop') {
             margin-top: rem(64px);

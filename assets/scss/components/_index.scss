@@ -5,7 +5,9 @@
 @use 'success-error-form';
 @use 'form-feedback';
 @use 'form-meeting';
+@use 'form-download';
 @use 'form-demo';
+@use 'form-course';
 @use 'form-fields';
 @use 'form-components';
 @use 'mail-box';
@@ -15,3 +17,4 @@
 @use 'routes';
 @use 'premises-box';
 @use 'info-rec';
+@use 'employee-card';

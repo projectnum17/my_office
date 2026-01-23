@@ -1,0 +1,658 @@
+@use '../../base/media' as *;
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+
+.buying {
+    margin-bottom: var(--section-pdd);
+
+    &__content {
+        @include media('desktop') {
+            padding: rem(56px);
+            border-radius: rem(48px) rem(1px) rem(48px) rem(1px);
+            background: #323871;
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        flex-direction: column;
+        gap: rem(12px);
+        margin-bottom: rem(32px);
+        @include media('tablet') {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        @include media('desktop') {
+            margin-bottom: rem(104px);
+        }
+    }
+
+    &__tab {
+        font: 500 #{rem(16px)} / 150% $ff-base;
+        padding: rem(8px);
+        border-radius: rem(12px);
+        width: max-content;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('laptop') {
+            padding: rem(16px);
+            font-size: rem(18px);
+        }
+        @include media('desktop') {
+            font-size: rem(28px);
+        }
+
+        &.is-active {
+            background: #edf3f9;
+            color: #090909;
+        }
+    }
+
+    &__foot {
+        padding-top: rem(32px);
+
+        &-title {
+            font: 500 #{rem(22px)} / 130% $ff-base;
+            letter-spacing: 0.4px;
+            margin-bottom: rem(24px);
+            @include media('laptop') {
+                padding-top: rem(104px);
+                font-size: rem(28px);
+                max-width: rem(692px);
+            }
+        }
+
+        .cta {
+            width: 100%;
+            @include media('laptop') {
+                width: max-content;
+                min-width: rem(260px);
+            }
+        }
+    }
+
+    &__box {
+        overflow: hidden;
+        border-radius: rem(24px) rem(1px) rem(24px) rem(1px);
+        padding: rem(16px);
+        background: #323871;
+        @include media('laptop') {
+            padding: rem(32px);
+        }
+        @include media('desktop') {
+            padding: 0;
+            border-radius: 0;
+        }
+
+        &--thrd {
+            .buying__text {
+                margin-bottom: rem(32px);
+                @include media('laptop') {
+                    margin-bottom: rem(56px);
+                }
+            }
+            .buying__subtitle {
+                margin-bottom: rem(24px);
+                @include media('laptop') {
+                    margin-bottom: rem(24px);
+                    max-width: rem(657px);
+                    font-size: rem(28px);
+                }
+            }
+
+            .cta {
+                width: 100%;
+                @include media('laptop') {
+                    width: max-content;
+                    min-width: rem(260px);
+                }
+            }
+        }
+
+        &--scnd {
+            .buying__text {
+                margin-bottom: rem(16px);
+                @include media('laptop') {
+                    margin-bottom: rem(56px);
+                }
+            }
+            .buying__subtitle {
+                margin-bottom: rem(32px);
+                @include media('laptop') {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &--frst {
+            .buying__subtitle {
+                margin-bottom: rem(16px);
+                @include media('laptop') {
+                    margin-bottom: rem(0px);
+                }
+            }
+        }
+    }
+
+    &__text {
+        font: 500 #{rem(16px)} / 150% $ff-base;
+        @include media('laptop') {
+            font-size: rem(18px);
+            max-width: rem(718px);
+        }
+    }
+
+    &__subtitle {
+        font: 500 #{rem(22px)} / 130% $ff-base;
+        letter-spacing: 0.4px;
+        @include media('laptop') {
+            font-size: rem(40px);
+            margin-bottom: rem(32px);
+        }
+    }
+
+    &__panel {
+        @include media('laptop') {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: rem(20px);
+            margin-bottom: rem(32px);
+        }
+    }
+
+    &__diploma {
+        overflow: visible;
+        @include media('laptop') {
+            overflow: hidden;
+        }
+        &-slide {
+            height: auto;
+        }
+    }
+
+    &__more {
+        display: flex;
+        align-items: center;
+        gap: rem(8px);
+        margin-bottom: rem(32px);
+
+        p {
+            margin: 0;
+            font: 400 #{rem(14px)} / 150% $ff-base;
+
+            a {
+                color: #9dd0ff;
+                text-decoration: underline;
+                text-underline-offset: rem(3px);
+            }
+        }
+    }
+
+    &__nav {
+        display: none;
+        @include media('laptop') {
+            display: flex;
+            gap: rem(16px);
+        }
+    }
+
+    &__details {
+        @include media('laptop') {
+            border-radius: rem(24px);
+            padding: rem(32px);
+            margin-bottom: rem(56px);
+            background: #272d69;
+        }
+        @include media('desktop') {
+            width: 100%;
+            flex-shrink: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &__prices {
+        @include media('desktop') {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: rem(40px);
+            margin-bottom: rem(56px);
+
+            .col {
+                &:first-child {
+                    max-width: rem(718px);
+                }
+                &:last-child {
+                    display: flex;
+                    max-width: rem(609px);
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__reminder {
+        font: 500 #{rem(16px)} / 150% $ff-base;
+        margin-bottom: rem(32px);
+        @include media('laptop') {
+            font-size: rem(18px);
+            max-width: rem(718px);
+            padding-left: rem(24px);
+            border-left: 1px solid #4a9fee66;
+        }
+        @include media('desktop') {
+            margin-bottom: 0;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: rem(24px);
+        margin-bottom: rem(10px);
+        @include media('laptop') {
+            gap: rem(16px);
+            margin-bottom: rem(16px);
+        }
+    }
+
+    &__terms {
+        font: 400 #{rem(13px)} / 150% $ff-base;
+        margin-bottom: rem(24px);
+        @include media('laptop') {
+            font-size: rem(14px);
+            margin-bottom: rem(16px);
+        }
+    }
+
+    &__total {
+        display: flex;
+        align-items: center;
+        gap: rem(10px);
+        margin-bottom: rem(32px);
+        @include media('laptop') {
+            margin-bottom: 0;
+            gap: 0;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: rem(4px);
+
+            &:first-child {
+                padding-right: rem(5px);
+                position: relative;
+                border-right: 1px solid #4a9fee66;
+                @include media('laptop') {
+                    padding-right: rem(16px);
+                    margin-right: rem(16px);
+                }
+            }
+        }
+
+        p {
+            margin: 0;
+
+            &:first-child {
+                font: 500 #{rem(14px)} / 150% $ff-base;
+                @include media('laptop') {
+                    font-size: rem(16px);
+                }
+            }
+            &:last-child {
+                font: 500 #{rem(18px)} / 140% $ff-base;
+                color: #9dd0ff;
+            }
+        }
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16px);
+        margin-bottom: rem(32px);
+        @include media('laptop') {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: rem(28px);
+        }
+    }
+
+    &__benefits {
+        margin-bottom: rem(32px);
+        @include media('laptop') {
+            margin-bottom: rem(56px);
+        }
+        .cta {
+            width: 100%;
+            @include media('laptop') {
+                width: max-content;
+                min-width: rem(316px);
+            }
+        }
+    }
+
+    &__benefit {
+        padding: rem(16px);
+        border-radius: rem(24px);
+        background: #272d69;
+        @include media('laptop') {
+            font-size: rem(18px);
+            padding: rem(24px);
+        }
+        @include media('desktop') {
+            border-radius: rem(32px);
+            padding: rem(32px);
+        }
+
+        &-head {
+            display: flex;
+            align-items: center;
+            gap: rem(8px);
+            margin-bottom: rem(12px);
+            @include media('laptop') {
+                margin-bottom: rem(16px);
+            }
+
+            img {
+                width: rem(18px);
+                height: rem(18px);
+            }
+        }
+
+        &-title {
+            font: 500 #{rem(16px)} / 150% $ff-base;
+            @include media('laptop') {
+                font-size: rem(18px);
+            }
+        }
+
+        &-text {
+            font: 400 #{rem(14px)} / 150% $ff-base;
+            @include media('laptop') {
+                font-size: rem(16px);
+            }
+        }
+
+        &-list {
+            display: flex;
+            gap: rem(4px);
+            flex-direction: column;
+            padding-left: rem(8px);
+
+            &.list-lg {
+                flex-direction: row;
+                flex-wrap: wrap;
+                @include media('laptop') {
+                    gap: rem(10px);
+                }
+                li {
+                    width: max-content;
+                }
+            }
+            li {
+                font: 400 #{rem(14px)} / 150% $ff-base;
+                display: inline-flex;
+                align-items: center;
+                gap: rem(8px);
+                @include media('laptop') {
+                    font-size: rem(16px);
+                }
+                &::before {
+                    content: '';
+                    display: inline-flex;
+                    flex-shrink: 0;
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    background: #f7f9fc;
+                }
+            }
+        }
+    }
+
+    .info-details {
+        display: flex;
+        align-items: center;
+        gap: rem(12px);
+        @include media('laptop') {
+            gap: rem(24px);
+        }
+
+        &:first-child {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: rem(12px);
+            @include media('laptop') {
+                flex-direction: row;
+                align-items: center;
+                gap: rem(32px);
+            }
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            gap: rem(8px);
+
+            img {
+                width: rem(18px);
+                height: rem(18px);
+            }
+
+            p {
+                font: 500 #{rem(14px)} / 150% $ff-base;
+                @include media('laptop') {
+                    font-size: rem(16px);
+                }
+            }
+        }
+
+        &__currencys {
+            display: flex;
+            align-items: center;
+            gap: rem(8px);
+            @include media('laptop') {
+                gap: rem(16px);
+            }
+        }
+
+        &__currency {
+            align-items: center;
+            justify-content: center;
+            border-radius: rem(4px);
+            width: rem(46px);
+            height: rem(40px);
+            padding: rem(9px);
+            font: 500 #{rem(14px)} / 150% $ff-base;
+            border: 1px solid #edf3f9;
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+            @include hover {
+                background: #edf3f9;
+                color: #272d69;
+            }
+            @include media('laptop') {
+                width: rem(47px);
+                height: rem(32px);
+                font-size: rem(16px);
+            }
+
+            &.is-active {
+                background: #edf3f9;
+                color: #272d69;
+            }
+        }
+    }
+
+    .diploma-box {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        position: relative;
+        border-radius: rem(24px);
+        padding: rem(29px) rem(16px) rem(25px) rem(16px);
+        background: #272d69;
+        @include media('desktop') {
+            padding: rem(45px) rem(24px) rem(24px) rem(24px);
+        }
+
+        &__foot {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: rem(12px);
+            @include media('desktop') {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+
+        &__bg {
+            width: rem(171px);
+            height: rem(248px);
+            pointer-events: none;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            right: rem(6px);
+        }
+
+        &__head {
+            padding-bottom: rem(22px);
+            margin-bottom: rem(8px);
+            display: flex;
+            align-items: flex-end;
+            border-bottom: 1px solid #4a9fee66;
+            @include media('desktop') {
+                padding-bottom: rem(39px);
+                margin-bottom: rem(16px);
+            }
+        }
+
+        &__text {
+            font: 400 #{rem(14px)} / 150% $ff-base;
+            @include media('desktop') {
+                font-size: rem(16px);
+            }
+        }
+
+        &__label {
+            position: absolute;
+            top: rem(16px);
+            right: rem(16px);
+            font: 500 #{rem(16px)} / 150% $ff-base;
+            padding: rem(2px) rem(12px);
+            border-radius: rem(24px);
+            display: inline-flex;
+            background: #34407d;
+            border: 1px solid #717bb1;
+            @include media('desktop') {
+                padding: rem(2px) rem(18px);
+            }
+        }
+
+        &__title {
+            font: 400 #{rem(50px)} / 110% $ff-base;
+            opacity: 0.7;
+            color: #edf3f9;
+            @include media('desktop') {
+                font-size: rem(80px);
+            }
+        }
+
+        &__ico {
+            width: rem(60px);
+            height: rem(60px);
+            flex-shrink: 0;
+            @include media('desktop') {
+                width: rem(120px);
+                height: rem(120px);
+            }
+        }
+
+        .cta {
+            width: 100%;
+            padding-block: rem(7px);
+            margin-top: auto;
+            @include media('desktop') {
+                margin: 0;
+                padding-inline: 5px;
+                padding-block: rem(11px);
+            }
+        }
+    }
+
+    .courses-box {
+        padding: rem(16px);
+        border-radius: rem(24px);
+        background: #272d69;
+        @include media('laptop') {
+            padding: rem(24px);
+            border-radius: rem(32px);
+        }
+
+        &__head {
+            display: flex;
+            flex-direction: column;
+            gap: rem(12px);
+            margin-bottom: rem(16px);
+            padding-bottom: rem(12px);
+            border-bottom: 1px solid #4a9fee66;
+            @include media('laptop') {
+                margin-bottom: rem(32px);
+                padding-bottom: rem(16px);
+                gap: rem(16px);
+            }
+
+            img {
+                width: rem(18px);
+                height: rem(18px);
+            }
+
+            p {
+                font: 400 #{rem(16px)} / 150% $ff-base;
+            }
+        }
+
+        &__date,
+        &__location,
+        &__reason {
+            display: flex;
+            align-items: center;
+            gap: rem(8px);
+        }
+
+        &__location {
+            display: flex;
+            align-items: center;
+            gap: rem(16px);
+
+            div {
+                display: flex;
+                align-items: center;
+                gap: rem(8px);
+            }
+        }
+
+        .cta {
+            max-width: rem(161px);
+            width: 100%;
+        }
+    }
+
+    .content-title {
+        margin-bottom: rem(16px);
+        @include media('laptop') {
+            margin-bottom: rem(32px);
+        }
+    }
+
+    .cta {
+        z-index: 2;
+    }
+}

@@ -166,7 +166,8 @@
             }
 
             .form-data form .cta {
-                max-width: rem(260px);
+                max-width: max-content;
+                min-width: rem(260px);
             }
         }
     }

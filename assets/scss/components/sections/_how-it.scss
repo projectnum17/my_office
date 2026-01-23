@@ -163,7 +163,8 @@
             display: none;
             @include media('laptop') {
                 display: inline-flex;
-                max-width: rem(260px);
+                max-width: max-content;
+                min-width: rem(260px);
             }
         }
     }
