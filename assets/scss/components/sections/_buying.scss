@@ -509,6 +509,8 @@
             @include media('desktop') {
                 flex-direction: row;
                 align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: space-between;
             }
         }
 
@@ -528,6 +530,9 @@
             display: flex;
             align-items: flex-end;
             border-bottom: 1px solid #4a9fee66;
+            @include media('laptop') {
+                position: relative;
+            }
             @include media('desktop') {
                 padding-bottom: rem(39px);
                 margin-bottom: rem(16px);
@@ -538,6 +543,7 @@
             font: 400 #{rem(14px)} / 150% $ff-base;
             @include media('desktop') {
                 font-size: rem(16px);
+                max-width: rem(267px);
             }
         }
 
@@ -560,6 +566,9 @@
             font: 400 #{rem(50px)} / 110% $ff-base;
             opacity: 0.7;
             color: #edf3f9;
+            @include media('laptop') {
+                z-index: 2;
+            }
             @include media('desktop') {
                 font-size: rem(80px);
             }
@@ -569,6 +578,11 @@
             width: rem(60px);
             height: rem(60px);
             flex-shrink: 0;
+            @include media('laptop') {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
             @include media('desktop') {
                 width: rem(120px);
                 height: rem(120px);
@@ -581,6 +595,7 @@
             margin-top: auto;
             @include media('desktop') {
                 margin: 0;
+                width: rem(140px);
                 padding-inline: 5px;
                 padding-block: rem(11px);
             }
