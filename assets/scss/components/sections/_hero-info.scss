@@ -29,6 +29,27 @@
         }
     }
 
+    &--long {
+
+        .main-title {
+            max-width: rem(940px);
+        }
+
+        .hero-info__head {
+            max-width: 100%;
+        }
+
+        .hero-info__label {
+            max-width: rem(486px);
+        }
+
+        @include media('desktop') {
+            .hero-info__descr {
+                gap: rem(40px);
+            }
+        }
+    }
+
     &__descr {
         display: flex;
         flex-direction: column;
