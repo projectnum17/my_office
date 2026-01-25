@@ -36,6 +36,15 @@
         gap: rem(6px);
         border: 1px solid #717bb1;
         background: #34407d;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include hover {
+            background: #edf3f9;
+            color: #272d69;
+
+            &::before {
+                background: #272d69;
+            }
+        }
         @include media('laptop') {
             padding: rem(10px) rem(32px);
         }
@@ -48,6 +57,7 @@
             width: rem(4px);
             height: rem(4px);
             background: #f7f9fc;
+            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
             @include media('laptop') {
                 width: rem(8px);
                 height: rem(8px);

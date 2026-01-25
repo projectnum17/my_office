@@ -5,8 +5,17 @@
 .article-content {
     margin-bottom: var(--section-pdd);
     overflow: hidden;
+
     @include media('laptop') {
         overflow: inherit;
+    }
+
+    &--sm {
+        .article-content__about {
+            *:not(img) {
+                max-width: rem(800px);
+            }
+        }
     }
 
     .container {
