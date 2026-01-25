@@ -1,0 +1,225 @@
+@use '../../base/media' as *;
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+
+.article-content {
+    margin-bottom: var(--section-pdd);
+    overflow: hidden;
+    @include media('laptop') {
+        overflow: inherit;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: rem(32px);
+
+        @include media('laptop') {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: rem(20px);
+        }
+    }
+
+    &__details {
+        @include media('laptop') {
+            min-width: 0;
+            max-width: rem(1223px);
+        }
+    }
+
+    &__about {
+        margin-bottom: rem(32px);
+
+        blockquote {
+            margin: 0;
+            font: 500 #{rem(22px)} / 130% $ff-base;
+            letter-spacing: 0.4px;
+            margin-bottom: rem(32px);
+            font: 400 #{rem(16px)} / 150% $ff-base;
+            @include media('laptop') {
+                font-size: rem(28px);
+                margin-bottom: rem(56px);
+            }
+        }
+
+        p {
+            font: 400 #{rem(16px)} / 150% $ff-base;
+            margin-bottom: rem(24px);
+
+            @include media('laptop') {
+                font-size: rem(24px);
+            }
+
+            &:has(+ h3),
+            &:has(+ h4),
+            &:has(+ h5),
+            &:has(+ h6),
+            &:has(+ h2) {
+                @include media('laptop') {
+                    margin-bottom: rem(56px);
+                }
+            }
+
+            &:first-of-type {
+                font: 500 #{rem(18px)} / 140% $ff-base;
+                margin-bottom: rem(32px);
+                @include media('laptop') {
+                    font-size: rem(24px);
+                    margin-bottom: rem(56px);
+                }
+            }
+        }
+
+        img {
+            aspect-ratio: 335 / 180;
+            border-radius: rem(24px);
+            margin-bottom: rem(32px);
+            @include media('laptop') {
+                border-radius: rem(40px);
+                margin-bottom: rem(56px);
+            }
+        }
+
+        h2 {
+            font: 500 #{rem(28px)} / 130% $ff-base;
+            letter-spacing: 0.4px;
+            margin: 0 0 rem(16px) 0;
+
+            @include media('laptop') {
+                margin-bottom: rem(24px);
+                font-size: rem(46px);
+            }
+        }
+
+        h3 {
+            font: 500 #{rem(22px)} / 130% $ff-base;
+            letter-spacing: 0.4px;
+            margin: 0 0 rem(16px) 0;
+            @include media('laptop') {
+                margin-bottom: rem(24px);
+                font-size: rem(40px);
+            }
+        }
+
+        h4 {
+            font: 500 #{rem(20px)} / 130% $ff-base;
+            letter-spacing: 0.4px;
+            margin: 0 0 rem(16px) 0;
+            @include media('laptop') {
+                margin-bottom: rem(24px);
+                font-size: rem(36px);
+            }
+        }
+
+        h5 {
+            font: 500 #{rem(18px)} / 130% $ff-base;
+            letter-spacing: 0.4px;
+            margin: 0 0 rem(16px) 0;
+
+            @include media('laptop') {
+                margin-bottom: rem(24px);
+                font-size: rem(32px);
+            }
+        }
+
+        h6 {
+            font: 500 #{rem(18px)} / 130% $ff-base;
+            letter-spacing: 0.4px;
+            margin: 0 0 rem(16px) 0;
+            @include media('laptop') {
+                margin-bottom: rem(24px);
+                font-size: rem(24px);
+            }
+        }
+
+        ul,
+        ol {
+            padding: 0 0 0 rem(20px);
+            margin: 0;
+
+            &:has(+ p),
+            &:has(+ h2),
+            &:has(+ h3),
+            &:has(+ h4),
+            &:has(+ h5),
+            &:has(+ h6),
+            &:has(+ ul),
+            &:has(+ ol),
+            &:has(+ blockquote) {
+                margin: 0 0 rem(32px) 0;
+            }
+
+            li {
+                font: 400 #{rem(16px)} / 150% $ff-base;
+                @include media('laptop') {
+                    font-size: rem(24px);
+                }
+            }
+        }
+    }
+
+    &__info {
+        @include media('laptop') {
+            position: sticky;
+            top: rem(120px);
+            max-width: rem(280px);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: rem(42px);
+        }
+        p {
+            font: 400 #{rem(16px)} / 150% $ff-base;
+            margin: 0 0 rem(16px) 0;
+        }
+    }
+
+    &__media {
+        display: flex;
+        align-items: center;
+        gap: rem(16px);
+
+        li {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            flex-shrink: 0;
+
+            a {
+                width: 100%;
+                height: 100%;
+                @include transitions(
+                    0.3s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
+                @include hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    &__headline {
+        display: none;
+        @include media('laptop') {
+            display: block;
+            writing-mode: sideways-lr;
+            text-orientation: mixed;
+            opacity: 5%;
+            font: 800 #{rem(70px)} / 130% $ff-base;
+            color: #9dd0ff;
+        }
+
+        @include media('desktop') {
+            font-size: rem(100px);
+        }
+        @include media('desktop-lg') {
+            font-size: rem(130px);
+        }
+        @media (min-width: 2520px) {
+            font-size: rem(164px);
+        }
+    }
+}

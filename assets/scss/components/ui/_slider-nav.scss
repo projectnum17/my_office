@@ -4,6 +4,7 @@
 
 .slider-nav {
     display: inline-flex;
+    flex-shrink: 0;
     width: rem(40px);
     height: rem(40px);
     align-items: center;
