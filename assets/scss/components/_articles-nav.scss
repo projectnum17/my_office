@@ -1,0 +1,71 @@
+@use '../base/media' as *;
+@use '../base/var' as *;
+@use '../base/mixins' as *;
+
+.articles-nav {
+    padding-top: rem(32px);
+    display: flex;
+    gap: rem(8px);
+    align-items: center;
+    justify-content: center;
+    @include media('laptop') {
+        justify-content: flex-start;
+        padding-top: rem(56px);
+    }
+
+    &__panel {
+        display: flex;
+        gap: rem(16px);
+        align-items: center;
+        @include media('laptop') {
+            gap: rem(8px);
+        }
+    }
+
+    &__prev {
+        @include hover {
+            transform: translateX(-5%);
+        }
+    }
+
+    &__next {
+        @include hover {
+            transform: translateX(5%);
+        }
+    }
+
+    &__btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: rem(40px);
+        min-height: rem(40px);
+        border-radius: rem(4px);
+        font: 500 #{rem(16px)} / 150% $ff-base;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('laptop') {
+            min-width: rem(36px);
+        }
+
+        @include hover {
+            color: #4a9fee;
+            background: #34407d;
+        }
+
+        &.is-active {
+            color: #4a9fee;
+            background: #34407d;
+        }
+    }
+
+    .articles-control {
+        width: rem(12px);
+        height: rem(24px);
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -4,6 +4,7 @@
 
 .location {
     margin-bottom: var(--section-pdd);
+    position: relative;
 
     &__head {
         display: flex;
@@ -87,5 +88,14 @@
 
     &__bg {
         display: none;
+        @include media('laptop') {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            pointer-events: none;
+            width: 500px;
+            object-fit: cover;
+        }
     }
 }
