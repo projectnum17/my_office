@@ -11,6 +11,10 @@
     @include media('laptop') {
         justify-content: flex-start;
         padding-top: rem(56px);
+
+        &--centered {
+            justify-content: center;
+        }
     }
 
     &__panel {
