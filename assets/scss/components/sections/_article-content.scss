@@ -38,6 +38,40 @@
         }
     }
 
+    &__contact {
+        display: flex;
+        gap: rem(8px);
+        @include media('tablet') {
+            flex-direction: row;
+            align-items: center;
+            gap: rem(16px);
+        }
+
+        img {
+            width: rem(32px);
+            height: rem(32px);
+            @include media('tablet') {
+                width: rem(48px);
+                height: rem(48px);
+            }
+        }
+
+        p {
+            font:
+                400 1rem / 150% 'RHD',
+                sans-serif;
+            @include media('tablet') {
+                font-size: rem(18px);
+            }
+        }
+
+        a {
+            text-decoration: underline;
+            text-underline-offset: rem(3px);
+            color: #9dd0ff;
+        }
+    }
+
     &__about {
         margin-bottom: rem(32px);
 
@@ -57,8 +91,10 @@
             font: 400 #{rem(16px)} / 150% $ff-base;
             margin-bottom: rem(24px);
 
-            @include media('laptop') {
-                font-size: rem(24px);
+            a {
+                text-decoration: underline;
+                text-underline-offset: rem(3px);
+                color: #9dd0ff;
             }
 
             &:has(+ h3),
@@ -71,12 +107,22 @@
                 }
             }
 
-            &:first-of-type {
+            // &:first-of-type {
+            //     font: 500 #{rem(18px)} / 140% $ff-base;
+            //     margin-bottom: rem(32px);
+            //     @include media('laptop') {
+            //         font-size: rem(24px);
+            //         margin-bottom: rem(56px);
+            //     }
+            // }
+
+            &:has(~ img) {
                 font: 500 #{rem(18px)} / 140% $ff-base;
                 margin-bottom: rem(32px);
+
                 @include media('laptop') {
                     font-size: rem(24px);
-                    margin-bottom: rem(56px);
+                    // margin-bottom: rem(56px);
                 }
             }
         }
@@ -129,7 +175,7 @@
 
             @include media('laptop') {
                 margin-bottom: rem(24px);
-                font-size: rem(32px);
+                font-size: rem(28px);
             }
         }
 
@@ -162,9 +208,6 @@
 
             li {
                 font: 400 #{rem(16px)} / 150% $ff-base;
-                @include media('laptop') {
-                    font-size: rem(24px);
-                }
             }
         }
     }
