@@ -39,7 +39,7 @@
             font: 500 #{rem(14px)} / 150% $ff-base;
             margin-bottom: rem(24px);
             @include media('laptop') {
-                font-size: rem(18px);
+                font-size: rem(20px);
             }
             @include media('desktop') {
                 margin-bottom: 0;
@@ -49,7 +49,7 @@
         &-text {
             p {
                 @include media('laptop') {
-                    font-size: rem(18px);
+                    font-size: rem(20px);
                 }
             }
         }
