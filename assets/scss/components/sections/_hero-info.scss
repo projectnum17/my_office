@@ -93,6 +93,20 @@
         }
     }
 
+    &--career {
+        .hero-info__descr {
+            @include media('desktop') {
+                gap: rem(56px);
+            }
+        }
+
+        .hero-info__label {
+            @include media('desktop') {
+                max-width: rem(800px);
+            }
+        }
+    }
+
     &--horizontal {
         .hero-info__post {
             display: flex;
