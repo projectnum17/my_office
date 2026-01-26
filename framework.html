@@ -341,6 +341,16 @@
                         </div>
                     </li>
                 </ul>
+                <a href="javascript: void(0)" class="cta js-demo-trigger">
+                    Request a demo
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                            fill="#272D69"></path>
+                        <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)" fill="#272D69">
+                        </rect>
+                    </svg>
+                </a>
             </div>
             <img src="./assets/imgs/dots-mask.png" alt="" class="values__bg">
         </section>
@@ -1074,6 +1084,120 @@
             </div>
         </div>
         <img src="./assets/imgs/dots-mask.png" class="feedback-form__bg" />
+    </div>
+    <div class="demo-modal js-demo-modal">
+        <button type="button" class="close-form laptop--hidden js-demo-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M6.39941 18.3084L5.69141 17.6004L11.2914 12.0004L5.69141 6.40038L6.39941 5.69238L11.9994 11.2924L17.5994 5.69238L18.3074 6.40038L12.7074 12.0004L18.3074 17.6004L17.5994 18.3084L11.9994 12.7084L6.39941 18.3084Z"
+                    fill="#F7F9FC" />
+            </svg>
+        </button>
+        <div class="container">
+            <div class="demo-modal__content js-demo-content">
+                <button type="button" class="close-form laptop--visible js-feedback-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.39941 18.3084L5.69141 17.6004L11.2914 12.0004L5.69141 6.40038L6.39941 5.69238L11.9994 11.2924L17.5994 5.69238L18.3074 6.40038L12.7074 12.0004L18.3074 17.6004L17.5994 18.3084L11.9994 12.7084L6.39941 18.3084Z"
+                            fill="#F7F9FC" />
+                    </svg>
+                </button>
+                <p class="form-title">
+                    Request a demo
+                </p>
+                <div class="form-data">
+                    <form>
+                        <div class="form-data__fields">
+                            <div class="text-field">
+                                <label for="demoName" class="text-field__title">Your Name*</label>
+                                <input required type="text" name="demoName" id="demoName" placeholder="Enter Your Name">
+                            </div>
+                            <div class="text-field">
+                                <label for="demoSurName" class="text-field__title">
+                                    Your Surname *
+                                </label>
+                                <input required type="text" name="demoSurName" id="demoSurName"
+                                    placeholder="Enter Your Surname">
+                            </div>
+                            <div class="text-field">
+                                <label for="demoPhone" class="text-field__title">
+                                    Your Phone
+                                </label>
+                                <input type="text" name="demoPhone" id="demoPhone" placeholder="Enter Your Phone">
+                            </div>
+                            <div class="text-field">
+                                <label for="demoEmail" class="text-field__title">
+                                    Your e-mail*
+                                </label>
+                                <input required type="text" name="demoEmail" id="demoEmail"
+                                    placeholder="Enter Your e-mail">
+                            </div>
+                            <div class="text-field">
+                                <label for="demoOrg" class="text-field__title">
+                                    Organization*
+                                </label>
+                                <input required type="text" name="demoOrg" id="demoOrg"
+                                    placeholder="Enter Your Organization">
+                            </div>
+                            <div class="text-field text-field--select">
+                                <label for="demoInterest" class="text-field__title">
+                                    Area of interests*
+                                </label>
+                                <select class="js-select" id="demoInterest" name="demoInterest">
+                                    <option value="" disabled selected>
+                                        Choose Area of Interests
+                                    </option>
+                                    <option value="1">Workplace strategy</option>
+                                    <option value="2">Placeholder text</option>
+                                    <option value="3">Project Management</option>
+                                    <option value="4">Facility Management</option>
+                                </select>
+                            </div>
+                            <div class="text-field">
+                                <label for="demoMess" class="text-field__title">Message</label>
+                                <textarea name="demoMess" id="demoMess"
+                                    placeholder="Enter Your Message (optional)"></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="cta">
+                            Send
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                    fill="#272D69" />
+                                <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
+                                    fill="#272D69" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="form-success js-demo-success">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.25 26.25L18.75 36.75L39.75 14.25" stroke="#F7F9FC" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p>Thanks! Your form was sent successfully</p>
+                <img src="./assets/imgs/dots-mask.png" alt="" class="form-success__bg">
+            </div>
+            <div class="form-error js-demo-error">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M36.6654 20V7.5H3.33203V32.5H19.9987M33.332 25.8333L26.6654 32.5M26.6654 25.8333L33.332 32.5"
+                        stroke="#EDF3F9" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.33203 7.5L19.9987 20L36.6654 7.5" stroke="#EDF3F9" stroke-width="1.2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p>
+                    Submission failed
+                    Something went wrong. Please check the details and try again
+                </p>
+                <img src="./assets/imgs/dots-mask.png" alt="" class="form-error__bg">
+            </div>
+        </div>
+        <img src="./assets/imgs/dots-mask.png" class="meeting-modal__bg" />
     </div>
 </body>
 

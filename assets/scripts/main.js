@@ -129,7 +129,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    const headerHandler = () => {
+        const header = document.querySelector('header');
+        if (!header) return;
+
+        const handleScroll = () => {
+            const currentScroll = window.scrollY;
+
+            if (currentScroll > 1) {
+                header.classList.add('is-scroll');
+            } else {
+                header.classList.remove('is-scroll');
+            }
+        };
+
+        handleScroll();
+        window.addEventListener('scroll', handleScroll);
+    };
+
     submitHandler();
     mobileMenuHandler();
     feedBackFormHandler();
+    headerHandler();
 });

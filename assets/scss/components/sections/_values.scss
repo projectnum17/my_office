@@ -7,18 +7,29 @@
     position: relative;
     overflow: hidden;
 
+    .cta {
+        width: 100%;
+        @include media('laptop') {
+            min-width: rem(260px);
+            width: max-content;
+        }
+    }
+
     &__cards {
         padding: rem(16px);
         border-radius: rem(32px) rem(1px) rem(32px) rem(1px);
         display: flex;
         flex-direction: column;
         gap: rem(32px);
+        margin-bottom: rem(32px);
         border: 1px solid #717bb1;
         @include media('laptop') {
             gap: rem(32px);
             padding: rem(32px);
+            margin-bottom: rem(48px);
         }
         @include media('desktop') {
+            margin-bottom: rem(64px);
             gap: rem(32px);
             padding: rem(60px);
             border-radius: rem(80px) rem(1px) rem(80px) rem(1px);
@@ -141,7 +152,8 @@
             height: rem(799px);
             transform: translateY(50%);
             object-fit: cover;
-            left: 0;
+            left: -1%;
+            top: 35%;
             bottom: 0;
             z-index: -1;
         }
