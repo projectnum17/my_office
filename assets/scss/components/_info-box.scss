@@ -186,9 +186,9 @@
         opacity: 0;
 
         p {
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2;
+            // display: -webkit-box;
+            // -webkit-box-orient: vertical;
+            // -webkit-line-clamp: 2;
             @include transitions(
                 0.5s,
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
