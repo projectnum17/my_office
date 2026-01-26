@@ -50,9 +50,11 @@
         aspect-ratio: 303 / 222;
         border-radius: rem(24px);
         overflow: hidden;
-
         width: 100%;
         margin: 0 auto;
+        @include media('laptop') {
+            border-radius: rem(40px);
+        }
 
         img {
             width: 100%;
