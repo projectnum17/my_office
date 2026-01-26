@@ -22,7 +22,7 @@
         &:not(:last-child) {
             margin-bottom: rem(20px);
             @include media('laptop') {
-                margin-bottom: rem(51px);
+                margin-bottom: rem(70px);
             }
         }
 

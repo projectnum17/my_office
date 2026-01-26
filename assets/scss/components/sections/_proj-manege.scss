@@ -64,6 +64,10 @@
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
             );
 
+            @include media('laptop') {
+                font-size: rem(14px);
+            }
+
             &::before {
                 content: '';
                 border-radius: 50%;

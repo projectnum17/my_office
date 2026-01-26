@@ -22,7 +22,8 @@
 
         @include media('desktop') {
             font-size: rem(14px);
-            padding: rem(16px) rem(12px);
+            padding: rem(14px) rem(12px);
+            font-size: rem(16px);
         }
 
         &::placeholder {
