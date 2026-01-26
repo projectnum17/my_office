@@ -1,0 +1,60 @@
+@use '../../base/media' as *;
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+
+.legal {
+    margin-bottom: var(--section-pdd);
+    &__head {
+        padding-top: rem(11px);
+        display: flex;
+        flex-direction: column;
+        gap: rem(12px);
+        margin-bottom: rem(32px);
+        @include media('laptop') {
+            margin-bottom: rem(42px);
+            padding-top: 0;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        @include media('desktop') {
+            margin-bottom: rem(80px);
+        }
+    }
+
+    &__date {
+        font: 400 #{rem(13px)} / 150% $ff-base;
+        display: inline-flex;
+        align-items: center;
+        gap: rem(8px);
+        @include media('laptop') {
+            font-size: rem(14px);
+        }
+
+        img {
+            width: rem(16px);
+            height: rem(16px);
+        }
+    }
+
+    &__content {
+        counter-reset: step;
+        h2 {
+            font: 500 #{rem(22px)} / 130% $ff-base;
+            letter-spacing: 0.4px;
+            margin: 0 0 rem(16px) 0;
+        }
+
+        h3 {
+            font: 500 #{rem(22px)} / 130% $ff-base;
+            letter-spacing: 0.4px;
+            margin: 0 0 rem(16px) 0;
+            counter-increment: step;
+            &::before {
+                font: 500 #{rem(22px)} / 130% $ff-base;
+                letter-spacing: 0.4px;
+                content: counter(step);
+            }
+        }
+    }
+}
