@@ -5,7 +5,11 @@
 .cases-card {
     width: 100%;
     flex-direction: column;
+    position: relative;
     @include hover {
+        .cases-card__tag {
+            background: #f7f9fc;
+        }
         .cases-card__img {
             &::after {
                 opacity: 0;
@@ -29,6 +33,25 @@
         }
     }
 
+    &__tag {
+        position: absolute;
+        z-index: 2;
+        left: 12px;
+        top: 12px;
+        font: 400 #{rem(13px)} / 150% $ff-base;
+        display: inline-flex;
+        width: max-content;
+        padding: rem(4px) rem(8px);
+        border-radius: rem(100px);
+        background: #f7f9fc99;
+        color: #1c2a71;
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('laptop') {
+            font-size: rem(14px);
+            padding: rem(4px) rem(12px);
+        }
+    }
+
     &__img {
         aspect-ratio: 298 / 192;
         position: relative;
@@ -37,6 +60,7 @@
         margin-bottom: rem(16px);
         @include media('desktop') {
             aspect-ratio: 528 / 308;
+            border-radius: rem(32px);
         }
         &::after {
             content: '';
