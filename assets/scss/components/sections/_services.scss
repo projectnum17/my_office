@@ -23,7 +23,7 @@
 
         &-about {
             @include media('desktop') {
-                max-width: rem(710px);
+                max-width: rem(700px);
             }
         }
 
@@ -32,6 +32,16 @@
                 display: flex;
                 gap: rem(31px);
                 align-items: flex-start;
+            }
+        }
+
+        &-text {
+            max-height: rem(360px);
+            overflow: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar {
+                display: none;
             }
         }
 
@@ -68,6 +78,7 @@
 
             @include media('desktop') {
                 overflow: inherit;
+                margin: 0;
                 flex-wrap: wrap;
                 max-width: 50%;
             }
@@ -75,6 +86,44 @@
             li {
                 display: flex;
                 flex-shrink: 0;
+                @include transitions(
+                    0.3s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
+
+                &:first-child {
+                    display: grid;
+                    grid-template-columns: 1fr;
+
+                    &:has(.is-active) {
+                        grid-template-columns: 0fr;
+                        a {
+                            padding: 0;
+                        }
+                    }
+
+                    a {
+                        overflow: hidden;
+                        background-color: transparent;
+                        color: #f7f9fc;
+                        border: none;
+
+                        @include hover {
+                            background-color: transparent;
+                            color: #f7f9fc;
+                        }
+
+                        &::before {
+                            display: none;
+                        }
+
+                        &.is-active {
+                            background-color: transparent;
+                            color: #f7f9fc;
+                        }
+                    }
+                }
+
                 a {
                     font: 400 #{rem(14px)} / 150% $ff-base;
                     border-radius: rem(24px);
@@ -85,6 +134,7 @@
                     padding: rem(6px) rem(10px);
                     border: 1px solid #717bb1;
                     background: #34407d;
+
                     @include media('desktop') {
                         font-size: rem(18px);
                     }
@@ -100,10 +150,15 @@
                             cubic-bezier(0.768, 0.304, 0.496, 0.884)
                         );
                     }
-                    @include transitions(
-                        0.3s,
-                        cubic-bezier(0.768, 0.304, 0.496, 0.884)
-                    );
+
+                    &.is-active {
+                        background: #edf3f9;
+                        color: #272d69;
+
+                        &::before {
+                            background: #272d69;
+                        }
+                    }
 
                     @include hover {
                         background: #edf3f9;
@@ -230,6 +285,7 @@
             &:last-child {
                 @include media('desktop') {
                     max-width: rem(709px);
+                    width: 100%;
                 }
             }
             &:first-child {
