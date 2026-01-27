@@ -1,6 +1,11 @@
-const mapHandler = () => {
+const initMap = () => {
     const mapEl = document.querySelector('#mapHandler');
     if (!mapEl) return;
+
+    if (typeof google === 'undefined' || typeof google.maps === 'undefined') {
+        console.warn('Google Maps API еще не загружен');
+        return;
+    }
 
     const lat = parseFloat(mapEl.dataset.lat);
     const lng = parseFloat(mapEl.dataset.lng);
@@ -11,30 +16,44 @@ const mapHandler = () => {
         center: { lat, lng },
         zoom,
         styles: [
-            {
-                elementType: 'geometry',
-                stylers: [{ color: '#f5f5f5' }],
-            },
-            {
-                elementType: 'labels.icon',
-                stylers: [{ visibility: 'off' }],
-            },
+            { elementType: 'geometry', stylers: [{ color: '#1d2c4d' }] },
             {
                 elementType: 'labels.text.fill',
-                stylers: [{ color: '#616161' }],
+                stylers: [{ color: '#8ec3b9' }],
             },
             {
                 elementType: 'labels.text.stroke',
-                stylers: [{ color: '#f5f5f5' }],
+                stylers: [{ color: '#1a3646' }],
             },
             {
-                featureType: 'administrative',
-                elementType: 'geometry',
-                stylers: [{ visibility: 'off' }],
+                featureType: 'administrative.country',
+                elementType: 'geometry.stroke',
+                stylers: [{ color: '#4b6878' }],
             },
             {
                 featureType: 'administrative.land_parcel',
-                stylers: [{ visibility: 'off' }],
+                elementType: 'labels.text.fill',
+                stylers: [{ color: '#64779e' }],
+            },
+            {
+                featureType: 'administrative.province',
+                elementType: 'geometry.stroke',
+                stylers: [{ color: '#4b6878' }],
+            },
+            {
+                featureType: 'landscape.man_made',
+                elementType: 'geometry.stroke',
+                stylers: [{ color: '#334e87' }],
+            },
+            {
+                featureType: 'landscape.natural',
+                elementType: 'geometry',
+                stylers: [{ color: '#023e58' }],
+            },
+            {
+                featureType: 'poi',
+                elementType: 'geometry',
+                stylers: [{ color: '#283d6a' }],
             },
             {
                 featureType: 'poi',
@@ -43,17 +62,17 @@ const mapHandler = () => {
             {
                 featureType: 'road',
                 elementType: 'geometry',
-                stylers: [{ color: '#ffffff' }],
-            },
-            {
-                featureType: 'road',
-                elementType: 'geometry.stroke',
-                stylers: [{ color: '#dcdcdc' }],
+                stylers: [{ color: '#304a7d' }],
             },
             {
                 featureType: 'road',
                 elementType: 'labels.text.fill',
-                stylers: [{ color: '#9e9e9e' }],
+                stylers: [{ color: '#98a5be' }],
+            },
+            {
+                featureType: 'road.highway',
+                elementType: 'geometry',
+                stylers: [{ color: '#2c6675' }],
             },
             {
                 featureType: 'transit',
@@ -62,20 +81,32 @@ const mapHandler = () => {
             {
                 featureType: 'water',
                 elementType: 'geometry',
-                stylers: [{ color: '#e0e0e0' }],
+                stylers: [{ color: '#0e1626' }],
             },
             {
                 featureType: 'water',
                 elementType: 'labels.text.fill',
-                stylers: [{ color: '#9e9e9e' }],
+                stylers: [{ color: '#4e6d70' }],
             },
         ],
     });
 
+    const iconSize = new google.maps.Size(40, 40);
+
     new google.maps.Marker({
         position: { lat, lng },
         map,
-        icon: pinIcon,
+        icon: {
+            url: pinIcon,
+            scaledSize: iconSize,
+        },
     });
 };
-window.mapHandler = mapHandler;
+
+window.mapHandler = initMap;
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof google !== 'undefined' && google.maps) {
+        initMap();
+    }
+});
