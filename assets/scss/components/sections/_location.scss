@@ -56,9 +56,6 @@
 
     &__map {
         position: relative;
-    }
-
-    &__pic {
         aspect-ratio: 335 / 150;
         border-radius: rem(24px);
         overflow: hidden;
@@ -66,23 +63,9 @@
             aspect-ratio: 1640 / 738;
         }
 
-        img {
-            width: 100%;
+        &-vbox {
             height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    &__pin {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: rem(18px);
-        height: rem(18px);
-        @include media('laptop') {
-            width: rem(55px);
-            height: rem(55px);
+            width: 100%;
         }
     }
 
