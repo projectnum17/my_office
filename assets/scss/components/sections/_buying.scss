@@ -243,6 +243,7 @@
         }
         @include media('desktop') {
             margin-bottom: 0;
+            font-size: rem(24px);
         }
     }
 
@@ -367,12 +368,18 @@
             @include media('laptop') {
                 font-size: rem(18px);
             }
+            @include media('desktop') {
+                font-size: rem(24px);
+            }
         }
 
         &-text {
             font: 400 #{rem(14px)} / 150% $ff-base;
             @include media('laptop') {
                 font-size: rem(16px);
+            }
+            @include media('desktop') {
+                font-size: rem(18px);
             }
         }
 
@@ -399,6 +406,9 @@
                 gap: rem(8px);
                 @include media('laptop') {
                     font-size: rem(16px);
+                }
+                @include media('desktop') {
+                    font-size: rem(18px);
                 }
                 &::before {
                     content: '';
@@ -631,6 +641,9 @@
 
             p {
                 font: 400 #{rem(16px)} / 150% $ff-base;
+                @include media('desktop-lg') {
+                    font-size: rem(18px);
+                }
             }
         }
 
