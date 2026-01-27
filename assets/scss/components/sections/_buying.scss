@@ -514,7 +514,7 @@
         &__foot {
             display: flex;
             flex-direction: column;
-            flex: 1;
+            // flex: 1;
             gap: rem(12px);
             @include media('desktop') {
                 flex-direction: row;
@@ -535,10 +535,11 @@
         }
 
         &__head {
+            flex: 1;
             padding-bottom: rem(22px);
             margin-bottom: rem(8px);
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             border-bottom: 1px solid #4a9fee66;
             @include media('laptop') {
                 position: relative;
@@ -573,14 +574,15 @@
         }
 
         &__title {
-            font: 400 #{rem(50px)} / 110% $ff-base;
+            font: 400 #{rem(32px)} / 110% $ff-base;
             opacity: 0.7;
             color: #edf3f9;
             @include media('laptop') {
                 z-index: 2;
+                max-width: 70%;
             }
-            @include media('desktop') {
-                font-size: rem(80px);
+            @include media('desktop-lg') {
+                font-size: rem(58px);
             }
         }
 
