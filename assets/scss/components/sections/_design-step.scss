@@ -197,13 +197,14 @@
             margin-bottom: 0;
         }
         .design-step__list {
+            margin-bottom: 0;
             @include media('desktop') {
                 max-width: rem(633px);
             }
         }
         .design-step__route {
             @include media('desktop') {
-                padding: rem(64px) rem(52px);
+                padding: rem(0px) rem(52px);
             }
         }
     }
