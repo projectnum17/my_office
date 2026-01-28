@@ -18,6 +18,24 @@
         }
     }
 
+    &__hidden {
+        @include media('laptop') {
+            max-width: rem(1088px);
+        }
+        p {
+            margin: 0;
+            font: 500 #{rem(16px)} / 150% $ff-base;
+            a {
+                text-decoration: underline;
+                text-underline-offset: rem(3px);
+                color: #9dd0ff;
+            }
+            @include media('laptop') {
+                font-size: rem(18px);
+            }
+        }
+    }
+
     &__content {
         @include media('laptop') {
             max-width: rem(1088px);

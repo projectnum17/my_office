@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const careerBoxes = document.querySelectorAll('.js-career-box');
         if (!careerBoxes.length) return;
 
-        // const offset = 200;
-
         careerBoxes.forEach((box) => {
             box.addEventListener('click', () => {
                 const isActive = box.classList.contains('is-active');
@@ -18,17 +16,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!isActive) {
                     box.classList.add('is-active');
                 }
-
-                // const elementPosition =
-                //     box.getBoundingClientRect().top + window.pageYOffset;
-
-                // window.scrollTo({
-                //     top: elementPosition - offset,
-                //     behavior: 'smooth',
-                // });
             });
         });
     };
 
+    const emptyCareerList = () => {
+        const careerContent = document.querySelector('.career__content');
+        const hiddenText = document.querySelector('.career__hidden');
+
+        if (!careerContent || !hiddenText) return;
+
+        const careerBoxes = careerContent.querySelectorAll('.js-career-box');
+
+        if (careerBoxes.length) {
+            hiddenText.style.display = 'none';
+            careerContent.style.display = '';
+        } else {
+            hiddenText.style.display = '';
+            careerContent.style.display = 'none';
+        }
+    };
+
+    emptyCareerList();
     careerListHandler();
 });

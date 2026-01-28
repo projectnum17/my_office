@@ -66,6 +66,33 @@
             }
         }
 
+        li:last-child {
+            & > a {
+
+                &::before {
+                    content: '';
+                    width: rem(24px);
+                    height: rem(24px);
+                    display: inline-flex;
+                    flex-shrink: 0;
+                    background: url('../imgs/ico/ico-user.svg') no-repeat center
+                        center / cover;
+                    @include transitions(
+                        0.3s,
+                        cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                    );
+                }
+            }
+
+            .mobile-menu__submenu {
+                a {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+
         li:has(.mobile-menu__routes) {
             &.is-active {
                 & > a {

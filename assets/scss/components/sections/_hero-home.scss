@@ -71,6 +71,7 @@
     }
 
     &__text {
+        max-width: rem(650px);
         font: 400 #{rem(18px)} / 145% $ff-base;
         display: inline-flex;
         gap: rem(12px);
@@ -84,10 +85,10 @@
 
         @include media('desktop') {
             position: absolute;
-            max-width: rem(240px);
+            max-width: rem(400px);
             width: 100%;
-            left: 55%;
-            top: 50px;
+            left: 43%;
+            top: 33px;
         }
     }
 

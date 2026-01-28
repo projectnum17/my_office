@@ -45,6 +45,88 @@
         }
     }
 
+    &__logged {
+        position: relative;
+        display: flex;
+
+        @include hover {
+            .wrapper {
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+
+        > a {
+            font: 500 1.125rem / 150% "RHD", sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: rem(8px);
+
+            &::before {
+                content: '';
+                width: rem(24px);
+                height: rem(24px);
+                display: inline-flex;
+                flex-shrink: 0;
+                background: url('../imgs/ico/ico-user.svg') no-repeat center
+                    center / cover;
+                @include transitions(
+                    0.3s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
+            }
+        }
+
+        .wrapper {
+            pointer-events: none;
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            width: max-content;
+            bottom: 0;
+            transform: translateY(100%);
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+
+            .submenu {
+                margin-top: rem(10px);
+                display: flex;
+                flex-direction: column;
+                gap: rem(8px);
+                padding: rem(24px);
+                width: max-content;
+                border-radius: rem(24px) rem(1px) rem(24px) rem(1px);
+                background-color: #323871;
+                border: 1px solid #272d69;
+
+                a {
+                    font: 400 #{rem(16px)} / 150% $ff-base;
+                }
+            }
+        }
+        a {
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+            background: linear-gradient(
+                135.3deg,
+                #ffffff 0.01%,
+                rgba(75, 159, 238, 0.8) 122.61%
+            );
+
+            background-size: 100% 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+
+            @include hover {
+                color: rgba(0, 0, 0, 0);
+            }
+        }
+    }
+
     &__list {
         @include media('laptop') {
             display: flex;
