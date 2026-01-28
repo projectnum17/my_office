@@ -539,7 +539,7 @@
             padding-bottom: rem(22px);
             margin-bottom: rem(8px);
             display: flex;
-            align-items: center;
+            // align-items: center;
             border-bottom: 1px solid #4a9fee66;
             @include media('laptop') {
                 position: relative;
@@ -582,7 +582,7 @@
                 max-width: 70%;
             }
             @include media('desktop-lg') {
-                font-size: rem(58px);
+                font-size: rem(42px);
             }
         }
 
