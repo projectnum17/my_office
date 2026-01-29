@@ -3,6 +3,7 @@
 @use '../base/mixins' as *;
 
 .logout-modal {
+    display: none !important;
     overflow: auto;
     position: fixed;
     inset: 0;
