@@ -39,9 +39,9 @@
     &__head {
         @include media('desktop') {
             display: flex;
-            align-items: center;
+            align-items: stretch;
             justify-content: space-between;
-            gap: rem(40px);
+            gap: rem(0px);
             position: relative;
         }
     }
@@ -62,7 +62,7 @@
 
         @include media('desktop') {
             // font-size: rem(104px);
-            // margin-bottom: 0;
+            margin-bottom: 0;
             font-size: 92px;
             max-width: 900px;
 
@@ -88,6 +88,7 @@
         @include media('desktop') {
             // position: absolute;
             max-width: rem(400px);
+            align-self: flex-end;
             width: 100%;
             // left: 43%;
             // top: 33px;
@@ -99,6 +100,9 @@
         justify-content: space-between;
         display: flex;
         align-items: center;
+        @include media('desktop') {
+            flex: 1;
+        }
     }
 
     &__list {
