@@ -4,7 +4,8 @@
 
 .contact {
     overflow: hidden;
-    margin-bottom: var(--section-pdd);
+    max-width: rem(2440px);
+    margin: 0 auto var(--section-pdd);
     position: relative;
 
     .container {

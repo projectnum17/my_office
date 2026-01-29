@@ -6,6 +6,9 @@
     display: grid;
     min-height: 100vh;
     min-height: 100svh;
+    margin: 0 auto;
+    position: relative;
+    max-width: rem(2440px);
     padding-block: rem(100px) rem(55px);
 
     .container {

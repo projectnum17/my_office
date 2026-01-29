@@ -3,6 +3,8 @@
 @use '../../base/mixins' as *;
 
 .how-it {
+    max-width: rem(2440px);
+    margin: 0 auto;
     padding-block: var(--section-pdd);
     position: relative;
     overflow: hidden;

@@ -3,6 +3,8 @@
 @use '../../base/mixins' as *;
 
 .hero-home {
+    max-width: rem(2440px);
+    margin: 0 auto;
     padding-top: rem(137px);
     display: grid;
     position: relative;

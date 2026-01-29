@@ -4,7 +4,8 @@
 
 .article-head {
     position: relative;
-    margin-bottom: rem(23px);
+    max-width: rem(2440px);
+    margin: 0 auto rem(23px);
 
     @include media('desktop') {
         margin-bottom: rem(80px);
