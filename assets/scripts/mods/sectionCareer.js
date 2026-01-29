@@ -23,16 +23,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const emptyCareerList = () => {
         const careerContent = document.querySelector('.career__content');
         const hiddenText = document.querySelector('.career__hidden');
+        const supportSection = document.querySelector('.support');
 
-        if (!careerContent || !hiddenText) return;
+        if (!careerContent || !hiddenText || !supportSection) return;
 
         const careerBoxes = careerContent.querySelectorAll('.js-career-box');
 
         if (careerBoxes.length) {
             hiddenText.style.display = 'none';
             careerContent.style.display = '';
+            supportSection.style.display = ''
         } else {
             hiddenText.style.display = '';
+            supportSection.style.display = 'none'
             careerContent.style.display = 'none';
         }
     };
