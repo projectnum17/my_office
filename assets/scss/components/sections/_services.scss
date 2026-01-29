@@ -30,6 +30,7 @@
         &-head {
             @include media('desktop') {
                 display: flex;
+                justify-content: space-between;
                 gap: rem(31px);
                 align-items: flex-start;
             }
@@ -80,7 +81,7 @@
                 overflow: inherit;
                 margin: 0;
                 flex-wrap: wrap;
-                max-width: 50%;
+                max-width: rem(709px);
             }
 
             li {
