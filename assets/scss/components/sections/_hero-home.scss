@@ -61,12 +61,14 @@
         }
 
         @include media('desktop') {
-            font-size: rem(104px);
-            margin-bottom: 0;
+            // font-size: rem(104px);
+            // margin-bottom: 0;
+            font-size: 92px;
+            max-width: 900px;
 
-            br {
-                display: block;
-            }
+            // br {
+            //     display: block;
+            // }
         }
     }
 
@@ -84,11 +86,11 @@
         }
 
         @include media('desktop') {
-            position: absolute;
+            // position: absolute;
             max-width: rem(400px);
             width: 100%;
-            left: 43%;
-            top: 33px;
+            // left: 43%;
+            // top: 33px;
         }
     }
 
