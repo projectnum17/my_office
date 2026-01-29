@@ -1,0 +1,97 @@
+@use '../base/media' as *;
+@use '../base/var' as *;
+@use '../base/mixins' as *;
+
+.logout-modal {
+    overflow: auto;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    z-index: 20;
+    background: #272d69;
+    color: #f7f9fc;
+    scrollbar-width: none;
+    transition: all 0.5s cubic-bezier(0.768, 0.304, 0.496, 0.884);
+    @include media('laptop') {
+        backdrop-filter: blur(8px);
+        box-shadow: -5px -5px 250px 0px #ffffff05 inset;
+        background: #32387199;
+
+        .container {
+        }
+    }
+
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        max-width: rem(793px);
+        gap: rem(24px);
+        width: 100%;
+
+        @include media('laptop') {
+            min-height: rem(640px);
+            padding: rem(80px);
+            gap: rem(42px);
+            border-radius: rem(40px);
+            background: #323871;
+        }
+
+        img {
+            width: rem(24px);
+            height: rem(24px);
+            @include media('laptop') {
+                width: rem(40px);
+                height: rem(40px);
+            }
+        }
+    }
+
+    &__title {
+        font: 500 #{rem(18px)} / 140% $ff-base;
+        @include media('laptop') {
+            font: 500 #{rem(28px)} / 140% $ff-base;
+        }
+    }
+
+    &__btns {
+        max-width: rem(634px);
+        width: 100%;
+        display: flex;
+        gap: rem(20px);
+        flex-direction: column;
+
+        @include media('laptop') {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: rem(44px);
+        }
+    }
+
+    &__cancel {
+        flex: 1;
+        font: 500 #{rem(16px)} / 150% $ff-base;
+        border-radius: rem(24px);
+        justify-content: center;
+        padding: rem(14px);
+        border: 1px solid #9dd0ff;
+    }
+
+    .cta {
+        flex: 1;
+        z-index: 2;
+    }
+}
