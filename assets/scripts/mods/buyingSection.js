@@ -141,6 +141,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     modalFormHandler({
+        triggerSelector: '.js-coming-trigger',
+        modalSelector: '.js-coming-modal',
+        closeSelector: '.js-coming-close',
+        contentSelector: '.js-coming-content',
+        successSelector: '.js-coming-success',
+        errorSelector: '.js-coming-error',
+    });
+
+    modalFormHandler({
         triggerSelector: '.js-course-trigger',
         modalSelector: '.js-course-modal',
         closeSelector: '.js-course-close',

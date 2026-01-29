@@ -5,6 +5,50 @@
 .buying {
     margin-bottom: var(--section-pdd);
 
+    &__coming {
+        padding-top: rem(32px);
+        @include media('laptop') {
+            padding-top: rem(56px);
+        }
+
+        &-title {
+            font: 500 #{rem(22px)} / 130% $ff-base;
+            letter-spacing: 0.4px;
+            margin-bottom: rem(16px);
+            @include media('laptop') {
+                font-size: rem(40px);
+                margin-bottom: rem(32px);
+            }
+        }
+
+        &-subtitle {
+            margin-bottom: rem(16px);
+            font: 500 #{rem(18px)} / 140% $ff-base;
+            @include media('laptop') {
+                font-size: rem(28px);
+                margin-bottom: rem(24px);
+            }
+        }
+
+        &-text {
+            font: 400 #{rem(16px)} / 150% $ff-base;
+            margin-bottom: rem(24px);
+            max-width: rem(750px);
+            @include media('laptop') {
+                font-size: rem(24px);
+                margin-bottom: rem(32px);
+            }
+        }
+
+        .cta {
+            width: 100%;
+            @include media('laptop') {
+                width: max-content;
+                min-width: rem(260px);
+            }
+        }
+    }
+
     &__content {
         @include media('desktop') {
             padding: rem(56px);

@@ -783,6 +783,27 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="buying__coming">
+                                <p class="buying__coming-title">Upcoming Course Dates</p>
+                                <p class="buying__coming-subtitle">
+                                    No upcoming public course dates
+                                </p>
+                                <p class="buying__coming-text">
+                                    We currently don’t have any public course dates scheduled. You’re welcome to register your interest, and we’ll get back to you as soon as new course dates are planned.
+                                </p>
+                                <a href="javascript: void(0)" class="cta js-coming-trigger">
+                                    Register interest
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                            fill="#272D69"></path>
+                                        <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
+                                            fill="#272D69">
+                                        </rect>
+                                    </svg>
+                                </a>
+                            </div>
                             <div class="buying__foot">
                                 <h3 class="buying__foot-title">
                                     Would you like to sign up additional participants? or Have training held at your
@@ -1753,6 +1774,165 @@
             </div>
         </div>
         <img src="./assets/imgs/dots-mask.png" class="meeting-modal__bg" />
+    </div>
+
+
+    <div class="coming-modal js-coming-modal">
+        <button type="button" class="close-form laptop--hidden js-coming-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M6.39941 18.3084L5.69141 17.6004L11.2914 12.0004L5.69141 6.40038L6.39941 5.69238L11.9994 11.2924L17.5994 5.69238L18.3074 6.40038L12.7074 12.0004L18.3074 17.6004L17.5994 18.3084L11.9994 12.7084L6.39941 18.3084Z"
+                    fill="#F7F9FC" />
+            </svg>
+        </button>
+        <div class="container">
+            <div class="coming-modal__content js-coming-content">
+                <button type="button" class="close-form laptop--visible js-coming-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.39941 18.3084L5.69141 17.6004L11.2914 12.0004L5.69141 6.40038L6.39941 5.69238L11.9994 11.2924L17.5994 5.69238L18.3074 6.40038L12.7074 12.0004L18.3074 17.6004L17.5994 18.3084L11.9994 12.7084L6.39941 18.3084Z"
+                            fill="#F7F9FC" />
+                    </svg>
+                </button>
+                <p class="form-title">
+                    Course registration form
+                </p>
+                <div class="form-data">
+                    <form>
+                        <div class="form-data__fields">
+                            <div class="text-field">
+                                <label for="comingName" class="text-field__title">Your Name*</label>
+                                <input required type="text" name="comingName" id="comingName"
+                                    placeholder="Enter Your Name">
+                            </div>
+                            <div class="text-field">
+                                <label for="comingSurName" class="text-field__title">
+                                    Your Surname *
+                                </label>
+                                <input required type="text" name="comingSurName" id="comingSurName"
+                                    placeholder="Enter Your Surname">
+                            </div>
+                            <div class="text-field">
+                                <label for="comingPhone" class="text-field__title">
+                                    Your Phone
+                                </label>
+                                <input type="text" name="comingPhone" id="comingPhone"
+                                    placeholder="Enter Your Phone">
+                            </div>
+                            <div class="text-field">
+                                <label for="comingEmail" class="text-field__title">
+                                    Your e-mail*
+                                </label>
+                                <input required type="text" name="comingEmail" id="comingEmail"
+                                    placeholder="Enter Your e-mail">
+                            </div>
+                            <div class="text-field">
+                                <label for="comingOrg" class="text-field__title">
+                                    Organization*
+                                </label>
+                                <input required type="text" name="comingOrg" id="comingOrg"
+                                    placeholder="Enter Your Organization">
+                            </div>
+                            <div class="text-field">
+                                <label for="comingCountry" class="text-field__title">
+                                    Country*
+                                </label>
+                                <input required type="text" name="comingCountry" id="comingCountry"
+                                    placeholder="Enter Your Country">
+                            </div>
+                            <div class="text-field text-field--select">
+                                <label for="comingParts" class="text-field__title">
+                                    Which parts would you like to attend*
+                                </label>
+                                <select class="js-select" id="comingParts" name="comingParts">
+                                    <option value="" disabled selected>
+                                        Internal users
+                                    </option>
+                                    <option value="1">part_1</option>
+                                    <option value="2">part_2</option>
+                                    <option value="3">part_3</option>
+                                    <option value="4">part_4</option>
+                                </select>
+                            </div>
+                            <div class="text-field">
+                                <label for="comingBilling" class="text-field__title">Billing info*</label>
+                                <textarea name="comingBilling" id="comingBilling"
+                                    placeholder="Placeholder text"></textarea>
+                            </div>
+                            <div class="text-field text-field--lg">
+                                <label for="courseDiscount" class="text-field__title">
+                                    Discount
+                                </label>
+                                <input required type="text" name="courseDiscount" id="courseDiscount"
+                                    placeholder="Enter dicount">
+                            </div>
+                            <div class="text-field">
+                                <label for="comingOther" class="text-field__title">Other information - for example allergies:</label>
+                                <textarea name="comingOther" id="comingOther"
+                                    placeholder="Placeholder text"></textarea>
+                            </div>
+                            <div class="text-field text-field--select">
+                                <label for="comingFind" class="text-field__title">
+                                    How did you find us out?
+                                </label>
+                                <select class="js-select" id="comingFind" name="comingFind">
+                                    <option value="" disabled selected>
+                                        Source
+                                    </option>
+                                    <option value="1">Google</option>
+                                    <option value="2">Linkedin</option>
+                                    <option value="3">Recommendation</option>
+                                    <option value="4">Ad</option>
+                                    <option value="5">Salesperson</option>
+                                    <option value="6">Prior knowlege</option>
+                                    <option value="7">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field-check">
+                            <input type="checkbox" id="comingInclude">
+                            <label for="comingInclude" class="field-check__ex">
+                                I accept the <a target="_blank" href="javascript: void(0)">GDPR Terms</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="cta">
+                            Register
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.92188 11.0801L18.1719 11.0801L12.9219 5.83008L13.5819 5.08008L20.0819 11.5801L13.5819 18.0801L12.9219 17.3301L18.1719 12.0801L8.92188 12.0801V11.0801Z"
+                                    fill="#272D69" />
+                                <rect width="1" height="4" transform="matrix(0 -1 1 0 2.92188 12.0801)"
+                                    fill="#272D69" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="form-success js-coming-success">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.25 26.25L18.75 36.75L39.75 14.25" stroke="#F7F9FC" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p>Thanks! Your form was sent successfully</p>
+                <img src="./assets/imgs/dots-mask.png" alt="" class="form-success__bg">
+            </div>
+            <div class="form-error js-coming-error">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M36.6654 20V7.5H3.33203V32.5H19.9987M33.332 25.8333L26.6654 32.5M26.6654 25.8333L33.332 32.5"
+                        stroke="#EDF3F9" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.33203 7.5L19.9987 20L36.6654 7.5" stroke="#EDF3F9" stroke-width="1.2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p>
+                    Submission failed
+                    Something went wrong. Please check the details and try again
+                </p>
+                <img src="./assets/imgs/dots-mask.png" alt="" class="form-error__bg">
+            </div>
+        </div>
+        <img src="./assets/imgs/dots-mask.png" class="coming-modal__bg" />
     </div>
     <div class="course-modal js-course-modal">
         <button type="button" class="close-form laptop--hidden js-course-close">
