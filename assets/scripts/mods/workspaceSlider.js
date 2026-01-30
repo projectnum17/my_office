@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const swiper = new Swiper(sliderEl, {
             slidesPerView: 1,
             spaceBetween: 16,
-            loop: true,
             speed: 700,
             pagination: {
                 el: '.js-workspace-pag',
