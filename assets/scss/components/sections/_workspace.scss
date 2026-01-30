@@ -230,11 +230,19 @@
             }
 
             @include media('desktop') {
+                // width: rem(233px);
+                // height: rem(233px);
+                width: rem(190px);
+                height: rem(190px);
+                font-size: rem(20px);
+                padding-inline: rem(20px) !important;
+                padding-block: rem(20px) !important;
+            }
+
+            @media (min-width: 1610px) {
                 width: rem(233px);
                 height: rem(233px);
                 font-size: rem(24px);
-                padding-inline: rem(20px) !important;
-                padding-block: rem(20px) !important;
             }
 
             &.swiper-pagination-bullet-active {
@@ -264,15 +272,30 @@
                 right: rem(43px);
                 bottom: 0;
                 @include media('desktop') {
+                    // bottom: rem(20px);
+                    // left: rem(70px);
+                    right: rem(50px);
+                    bottom: rem(50px);
+                }
+                @media (min-width: 1610px) {
                     bottom: rem(20px);
                     right: rem(70px);
                 }
+                // @include media('desktop') {
+
+                // }
             }
             &:nth-child(4) {
                 position: absolute;
                 left: rem(43px);
                 bottom: 0;
                 @include media('desktop') {
+                    // bottom: rem(20px);
+                    // left: rem(70px);
+                    left: rem(50px);
+                    bottom: rem(50px);
+                }
+                @media (min-width: 1610px) {
                     bottom: rem(20px);
                     left: rem(70px);
                 }
