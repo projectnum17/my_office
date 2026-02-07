@@ -1,0 +1,185 @@
+@use '../../base/media' as *;
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+
+.hero-home {
+    max-width: rem(2440px);
+    margin: 0 auto;
+    padding-top: rem(137px);
+    display: grid;
+    position: relative;
+    min-height: calc(100vh - #{rem(84px)});
+    min-height: calc(100svh - #{rem(84px)});
+    margin-bottom: rem(48px);
+
+    @include media('tablet') {
+        min-height: auto;
+        margin-bottom: 0;
+    }
+
+    @include media('desktop') {
+        padding-top: rem(190px);
+    }
+
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: rem(20px);
+        padding-block: 0 rem(53px);
+
+        @include media('tablet') {
+            padding-block: 0 rem(104px);
+        }
+
+        @include media('laptop') {
+            gap: rem(90px);
+        }
+    }
+
+    &__head {
+        @include media('desktop') {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            gap: rem(0px);
+            position: relative;
+        }
+    }
+
+    &__title {
+        font: 700 #{rem(34px)} / 125% $ff-base;
+        margin-bottom: rem(32px);
+
+        br {
+            display: none;
+        }
+        @include media('tablet') {
+            font-size: rem(48px);
+        }
+        @include media('laptop') {
+            font-size: rem(72px);
+        }
+
+        @include media('desktop') {
+            // font-size: rem(104px);
+            margin-bottom: 0;
+            font-size: 92px;
+            max-width: 900px;
+
+            // br {
+            //     display: block;
+            // }
+        }
+    }
+
+    &__text {
+        max-width: rem(650px);
+        font: 400 #{rem(18px)} / 145% $ff-base;
+        display: inline-flex;
+        gap: rem(12px);
+        &::before {
+            display: flex;
+            content: '';
+            width: 2px;
+            border-radius: 2px;
+            background: #4a9fee66;
+        }
+
+        @include media('desktop') {
+            // position: absolute;
+            max-width: rem(400px);
+            align-self: flex-end;
+            width: 100%;
+            // left: 43%;
+            // top: 33px;
+        }
+    }
+
+    &__descr {
+        gap: rem(20px);
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        @include media('desktop') {
+            flex: 1;
+        }
+    }
+
+    &__list {
+        display: flex;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            gap: rem(24px);
+            justify-content: space-between;
+
+            &:nth-child(2) {
+                padding-inline: rem(23px);
+                margin-inline: rem(23px);
+                position: relative;
+                @include media('laptop') {
+                    padding-inline: rem(80px);
+                    margin-inline: rem(80px);
+                }
+
+                &::after,
+                &::before {
+                    content: '';
+                    position: absolute;
+                    height: 80%;
+                    width: 2px;
+                    bottom: 0;
+                    background: #4a9fee66;
+                }
+
+                &::before {
+                    left: 0;
+                }
+
+                &::after {
+                    right: 0;
+                }
+            }
+
+            img {
+                width: rem(32px);
+                height: rem(32px);
+                @include media('laptop') {
+                    width: rem(48px);
+                    height: rem(48px);
+                }
+            }
+
+            span {
+                font: 400 #{rem(36px)} / 100% $ff-base;
+                letter-spacing: 0.4px;
+                color: #9dd0ff;
+                @include media('laptop') {
+                    font-size: rem(64px);
+                    line-height: 36px;
+                }
+            }
+
+            p {
+                font: 400 #{rem(16px)} / 150% $ff-base;
+                @include media('laptop') {
+                    font-size: rem(18px);
+                }
+            }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        @include media('laptop') {
+            width: rem(531px);
+            height: rem(767px);
+        }
+    }
+}

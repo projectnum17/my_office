@@ -1,0 +1,65 @@
+@use '../base/media' as *;
+@use '../base/var' as *;
+@use '../base/mixins' as *;
+
+.filters-box {
+    display: flex;
+    align-items: center;
+    gap: rem(10px);
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &__filter {
+        display: inline-flex;
+        align-items: center;
+        gap: rem(6px);
+        font: 400 #{rem(14px)} / 150% $ff-base;
+        flex-shrink: 0;
+        border-radius: rem(24px);
+        padding: rem(6px) rem(10px);
+        border: 1px solid #717bb1;
+        background: #34407d;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('laptop') {
+            padding: rem(10px) rem(16px);
+        }
+
+        &::before {
+            content: '';
+            width: rem(4px);
+            height: rem(4px);
+            display: inline-flex;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: #f7f9fc;
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+            @include media('laptop') {
+                width: rem(8px);
+                height: rem(8px);
+            }
+        }
+
+        @include hover {
+            background: #edf3f9;
+            color: #272d69;
+            &::before {
+                background: #272d69;
+            }
+        }
+
+        &.is-active {
+            background: #edf3f9;
+            color: #272d69;
+            &::before {
+                background: #272d69;
+            }
+        }
+    }
+}

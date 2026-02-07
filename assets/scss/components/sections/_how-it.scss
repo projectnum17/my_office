@@ -1,0 +1,173 @@
+@use '../../base/media' as *;
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+
+.how-it {
+    max-width: rem(2440px);
+    margin: 0 auto;
+    padding-block: var(--section-pdd);
+    position: relative;
+    overflow: hidden;
+
+    .container {
+        @include media('laptop') {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: rem(40px);
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16px);
+        margin-bottom: rem(32px);
+        @include media('laptop') {
+            max-width: rem(528px);
+            gap: rem(25px);
+            margin: 0;
+        }
+    }
+
+    &__text {
+        font: 400 #{rem(18px)} / 145% $ff-base;
+    }
+
+    &__steps {
+        counter-reset: step;
+        margin-bottom: rem(32px);
+        @include media('desktop') {
+            max-width: rem(1099px);
+            width: 100%;
+        }
+    }
+
+    &__item {
+        padding: rem(16px);
+        max-width: rem(308px);
+        min-height: rem(184px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include media('tablet') {
+            max-width: 90%;
+        }
+
+        @include media('desktop') {
+            min-height: rem(162px);
+            max-width: rem(542px);
+            padding: rem(32px);
+
+            &:nth-child(2) {
+                transform: translateX(#{rem(245px)});
+            }
+            &:nth-child(4) {
+                transform: translateX(#{rem(150px)});
+            }
+        }
+
+        &:nth-child(odd) {
+            margin-right: auto;
+            border: 1px solid transparent;
+            border-right: 0;
+            border-top: 0;
+            border-image-slice: 1;
+            border-image-source: linear-gradient(
+                135.3deg,
+                rgba(28, 42, 113, 0) 0%,
+                rgba(255, 255, 255, 0.6) 0.01%,
+                rgba(75, 159, 238, 0.48) 122.61%
+            );
+
+            @include media('desktop') {
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
+        &:nth-child(even) {
+            margin-left: auto;
+            border: 1px solid transparent;
+            border-left: 0;
+            border-top: 0;
+            border-image-slice: 1;
+            border-image-source: linear-gradient(
+                135.3deg,
+                rgba(28, 42, 113, 0) 0%,
+                rgba(255, 255, 255, 0.6) 0.01%,
+                rgba(75, 159, 238, 0.48) 122.61%
+            );
+
+            @include media('desktop') {
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
+    }
+
+    &__title {
+        font: 500 #{rem(18px)} / 140% $ff-base;
+        counter-increment: step;
+        display: inline-flex;
+        align-items: center;
+        gap: rem(16px);
+        margin-bottom: rem(16px);
+
+        &::before {
+            font: 500 #{rem(18px)} / 140% $ff-base;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: rem(32px);
+            height: rem(32px);
+            content: counter(step);
+            border-radius: rem(4px);
+            color: #9dd0ff;
+            background: #323871;
+            @include media('desktop') {
+                width: rem(40px);
+                height: rem(40px);
+            }
+        }
+    }
+
+    &__text {
+        font: 400 #{rem(14px)} / 150% $ff-base;
+        @include media('laptop') {
+            font-size: rem(18px);
+            margin-bottom: rem(10px);
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        right: 0;
+        top: 0;
+        pointer-events: none;
+        @include media('laptop') {
+            right: auto;
+            top: rem(250px);
+            left: 0;
+            width: rem(656px);
+            height: rem(947px);
+        }
+    }
+
+    .cta {
+        width: 100%;
+        &.desktop--hidden {
+            @include media('laptop') {
+                display: none;
+            }
+        }
+        &.desktop--visible {
+            display: none;
+            @include media('laptop') {
+                display: inline-flex;
+                max-width: max-content;
+                min-width: rem(260px);
+            }
+        }
+    }
+}

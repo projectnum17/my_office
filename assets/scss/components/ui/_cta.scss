@@ -1,0 +1,79 @@
+@use '../../base/media' as *;
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+
+.cta {
+    font: 500 #{rem(16px)} / 150% $ff-base;
+    padding: rem(12px) rem(23px);
+    border-radius: rem(24px);
+    position: relative;
+    color: $drk_color;
+    overflow: hidden;
+    justify-content: center;
+    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    @include media('laptop') {
+        font-size: rem(18px);
+        padding: rem(12px) rem(32px);
+    }
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    }
+
+    &::after {
+        background: $accent_gr;
+    }
+
+    &::before {
+        opacity: 0;
+        background: $accent_gr_revert;
+    }
+
+    &:has(svg) {
+        gap: rem(8px);
+        svg {
+            transform: rotate(-45deg);
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+    }
+
+    @include hover {
+        &::after {
+            opacity: 0;
+        }
+
+        &::before {
+            opacity: 1;
+        }
+
+        &:has(svg) {
+            svg {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    &--download {
+        &:has(svg) {
+            svg {
+                transform: rotate(0);
+            }
+
+            @include hover {
+                svg {
+                    transform: translateY(10%);
+                }
+            }
+        }
+    }
+}

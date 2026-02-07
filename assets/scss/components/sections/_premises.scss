@@ -1,0 +1,57 @@
+@use '../../base/media' as *;
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+
+.premises {
+    position: relative;
+    overflow: hidden;
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16px);
+        margin-bottom: rem(32px);
+        @include media('laptop') {
+            gap: rem(32px);
+            margin-bottom: rem(56px);
+        }
+    }
+
+    &__text {
+        font: 400 #{rem(18px)} / 145% $ff-base;
+        max-width: rem(745px);
+    }
+
+    &__boxes {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: rem(16px);
+        margin-bottom: rem(32px);
+        @include media('laptop') {
+            gap: rem(28px);
+            margin-bottom: rem(56px);
+            flex-direction: row;
+        }
+    }
+
+    &__bg {
+        display: none;
+        @include media('laptop') {
+            display: block;
+            z-index: -1;
+            position: absolute;
+            right: rem(-50px);
+            top: rem(200px);
+            width: rem(531px);
+            height: rem(767px);
+        }
+    }
+
+    .cta {
+        width: 100%;
+        @include media('laptop') {
+            max-width: max-content;
+            min-width: rem(260px);
+        }
+    }
+}

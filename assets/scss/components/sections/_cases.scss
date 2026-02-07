@@ -1,0 +1,39 @@
+@use '../../base/media' as *;
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+
+.cases {
+    margin-bottom: var(--section-pdd);
+    overflow: hidden;
+    position: relative;
+
+    &__cards {
+        overflow: visible;
+    }
+
+    &__bg {
+        position: absolute;
+        top: rem(10px);
+        pointer-events: none;
+        right: rem(-10px);
+    }
+
+    .content-title {
+        margin-bottom: rem(32px);
+        @include media('laptop') {
+            margin-top: rem(64px);
+        }
+    }
+
+    .cta {
+        width: 100%;
+        margin-top: rem(32px);
+        @include media('tablet') {
+            max-width: max-content;
+            min-width: rem(260px);
+        }
+        @include media('laptop') {
+            margin-top: rem(64px);
+        }
+    }
+}

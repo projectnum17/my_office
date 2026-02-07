@@ -1,0 +1,62 @@
+@use '../base/media' as *;
+@use '../base/var' as *;
+@use '../base/mixins' as *;
+
+.subscribe-form {
+    position: relative;
+    border-radius: rem(16px);
+    padding: rem(16px);
+    background: #323871;
+    @include media('desktop') {
+        max-width: rem(1320px);
+    }
+
+    form {
+        .cta {
+            z-index: 2;
+            width: 100%;
+            @include media('desktop') {
+                max-width: max-content;
+                min-width: rem(260px);
+                align-self: flex-end;
+            }
+        }
+    }
+
+    &__fields {
+        @include media('desktop') {
+            display: flex;
+            align-items: center;
+            gap: rem(32px);
+            margin-bottom: rem(20px);
+        }
+    }
+
+    .text-field {
+        @include media('desktop') {
+            flex: 1;
+        }
+
+        &:first-of-type {
+            margin-bottom: rem(16px);
+            @include media('desktop') {
+                margin-bottom: 0;
+            }
+        }
+        &:last-of-type {
+            margin-bottom: rem(88px);
+            @include media('desktop') {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .field-check {
+        position: absolute;
+        bottom: rem(85px);
+        @include media('desktop') {
+            position: relative;
+            bottom: auto;
+        }
+    }
+}

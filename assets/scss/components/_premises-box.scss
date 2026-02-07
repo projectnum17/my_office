@@ -1,0 +1,188 @@
+@use '../base/media' as *;
+@use '../base/var' as *;
+@use '../base/mixins' as *;
+
+.premises-box {
+    flex-direction: column;
+    padding: rem(29px) rem(16px);
+    border-radius: rem(24px);
+    background: #323871;
+
+    @include media('laptop') {
+        flex: 1;
+        min-height: rem(230px);
+        padding: rem(27px) rem(32px);
+        border-radius: rem(32px);
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+        @include hover {
+            background-color: #edf3f9;
+            padding-top: rem(45px);
+
+            img {
+                margin: 0;
+                opacity: 0;
+                height: 0;
+                visibility: hidden;
+                transform: translateY(-20px);
+            }
+
+            .premises-box__head {
+                p {
+                    color: #272d69;
+                }
+
+                span {
+                    transform: rotate(-45deg);
+                    color: $lgth_color;
+                    background: $dark_indigo;
+
+                    &::after {
+                        opacity: 0;
+                    }
+                }
+            }
+
+            .premises-box__head {
+                margin-bottom: 0;
+            }
+
+            .premises-box__descr {
+                margin-top: rem(24px);
+                grid-template-rows: 1fr;
+            }
+
+            .premises-box__subs {
+                grid-template-rows: 0fr;
+            }
+        }
+    }
+
+    & > img {
+        display: none;
+
+        @include media('laptop') {
+            display: block;
+        }
+    }
+
+    img {
+        width: rem(32px);
+        height: rem(32px);
+
+        @include media('laptop') {
+            width: rem(40px);
+            height: rem(40px);
+            margin-bottom: rem(24px);
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        gap: rem(12px);
+        margin-bottom: rem(12px);
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+        img {
+            @include media('laptop') {
+                display: none;
+            }
+        }
+
+        p {
+            margin: 0;
+            font: 500 #{rem(18px)} / 140% $ff-base;
+
+            @include media('laptop') {
+                font-size: rem(24px);
+                @include transitions(
+                    0.5s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
+            }
+        }
+
+        span {
+            display: none;
+
+            @include media('laptop') {
+                border-radius: 50%;
+                width: rem(32px);
+                height: rem(32px);
+                display: inline-flex;
+                flex-shrink: 0;
+                align-items: center;
+                justify-content: center;
+                color: $dark_indigo;
+                transform: rotate(45deg);
+                overflow: hidden;
+                position: relative;
+                @include transitions(
+                    0.5s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    inset: 0;
+                    background: $accent_gr;
+                    @include transitions(
+                        0.5s,
+                        cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                    );
+                }
+
+                svg {
+                    position: relative;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+
+    &__subs {
+        display: none;
+        @include media('laptop') {
+            display: grid;
+            grid-template-rows: 1fr;
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+
+        h3 {
+            font: 400 #{rem(18px)} / 150% $ff-base;
+            margin: 0;
+            overflow: hidden;
+        }
+    }
+
+    &__descr {
+        @include media('laptop') {
+            // margin-top: auto;
+            display: grid;
+            grid-template-rows: 0fr;
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+        p {
+            font: 400 #{rem(16px)} / 150% $ff-base;
+            @include media('laptop') {
+                font-size: rem(18px);
+                overflow: hidden;
+                color: #272d69;
+            }
+        }
+    }
+}

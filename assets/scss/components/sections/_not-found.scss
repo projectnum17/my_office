@@ -1,0 +1,87 @@
+@use '../../base/media' as *;
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+
+.not-found {
+    display: grid;
+    min-height: 100vh;
+    min-height: 100svh;
+    margin: 0 auto;
+    position: relative;
+    max-width: rem(2440px);
+    padding-block: rem(100px) rem(55px);
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: rem(32px);
+        @include media('laptop') {
+            justify-content: center;
+        }
+        @include media('desktop') {
+            gap: rem(56px);
+        }
+    }
+
+    .cta {
+        margin-top: auto;
+        width: 100%;
+        @include media('laptop') {
+            width: max-content;
+            min-width: rem(260px);
+            margin-top: 0;
+        }
+        @include media('desktop') {
+            margin-top: rem(32px);
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        @include media('laptop') {
+            width: rem(531px);
+            height: rem(767px);
+        }
+    }
+
+    &__content {
+        max-width: rem(898px);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: rem(32px);
+        flex: 1;
+        @include media('laptop') {
+            flex: inherit;
+        }
+    }
+
+    &__title {
+        font: 700 #{rem(34px)} / 125% $ff-base;
+        color: #9dd0ff;
+        @include media('laptop') {
+            font-size: rem(56px);
+        }
+        @include media('desktop') {
+            font-size: rem(88px);
+        }
+    }
+
+    &__subtitle {
+        font: 500 #{rem(22px)} / 130% $ff-base;
+        letter-spacing: 0.4px;
+        @include media('laptop') {
+            font-size: rem(36px);
+        }
+        @include media('desktop') {
+            font-size: rem(40px);
+        }
+    }
+}

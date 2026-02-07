@@ -1,0 +1,63 @@
+@use '../../base/media' as *;
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+
+.team {
+    margin-bottom: var(--section-pdd);
+    overflow: hidden;
+
+    .content-title {
+        margin-bottom: rem(34px);
+        @include media('laptop') {
+            margin-bottom: rem(56px);
+        }
+    }
+
+    .container {
+        &:last-child {
+            padding: 0;
+            @include media('laptop') {
+                padding-inline: var(--container-padding);
+            }
+        }
+    }
+
+    &__cards {
+        display: flex;
+        gap: rem(16px);
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        padding-inline: var(--container-padding);
+        @include media('laptop') {
+            padding: 0;
+            overflow: inherit;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: rem(28px);
+        }
+        @include media('desktop') {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+    }
+
+    .employee-card {
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+        max-width: rem(298px);
+        flex-shrink: 0;
+        @include media('tablet') {
+            max-width: rem(320px);
+        }
+
+        @include media('laptop') {
+            flex-shrink: initial;
+            max-width: 100%;
+        }
+    }
+}

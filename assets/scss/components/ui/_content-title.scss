@@ -1,0 +1,26 @@
+@use '../../base/media' as *;
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+
+.content-title {
+    font: 500 #{rem(32px)} / 130% $ff-base;
+    letter-spacing: 0.4px;
+
+    @include media('laptop') {
+        font-size: rem(48px);
+    }
+    @include media('desktop') {
+        font-size: rem(56px);
+    }
+}
+
+.main-title {
+    font: 700 #{rem(34px)} / 125% $ff-base;
+    @include media('laptop') {
+        font-size: rem(48px);
+    }
+    @include media('desktop') {
+        font-size: rem(88px);
+        line-height: 130%;
+    }
+}
